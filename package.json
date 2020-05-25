@@ -1,0 +1,12 @@
+{
+  "name": "chrome-extension-accessibility-viewer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "node-sass --output dist src"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
