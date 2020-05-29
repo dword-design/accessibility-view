@@ -1,9 +1,9 @@
 <!-- TITLE/ -->
-# accessibility-mode
+# accessible-view
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
-[![NPM version](https://img.shields.io/npm/v/accessibility-mode.svg)](https://npmjs.org/package/accessibility-mode)
+[![NPM version](https://img.shields.io/npm/v/accessible-view.svg)](https://npmjs.org/package/accessible-view)
 ![Linux macOS Windows compatible](https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue)
 [![Build status](https://img.shields.io/github/workflow/status/dword-design/accessible-view/build)](https://github.com/dword-design/accessible-view/actions)
 [![Coverage status](https://img.shields.io/coveralls/dword-design/accessible-view)](https://coveralls.io/github/dword-design/accessible-view)
@@ -22,10 +22,10 @@
 
 ```bash
 # NPM
-$ npm install accessibility-mode
+$ npm install accessible-view
 
 # Yarn
-$ yarn add accessibility-mode
+$ yarn add accessible-view
 ```
 <!-- /INSTALL -->
 
