@@ -1,2 +1,13 @@
-node_modules
-dist
+.DS_Store
+/.babelrc.json
+/.cz.json
+/.editorconfig
+/.env.json
+/.eslintrc.json
+/.nyc_output
+/.releaserc.json
+/.test.env.json
+/.vscode
+/coverage
+/dist
+/node_modules
