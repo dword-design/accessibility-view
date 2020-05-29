@@ -1,4 +1,3 @@
-import browser from 'webextension-polyfill'
 import { property } from '@dword-design/functions'
 
 const update = enabled =>

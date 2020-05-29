@@ -1,4 +1,3 @@
-import browser from 'webextension-polyfill'
 import { property } from '@dword-design/functions'
 import styleCode from './assets/style.scss'
 

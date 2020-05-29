@@ -1,0 +1,9 @@
+{
+  "name": "Accessibility Mode",
+  "browser_action": {
+    "default_icon": "assets/icon.png"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
