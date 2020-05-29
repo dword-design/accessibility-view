@@ -1,10 +1,12 @@
+import browser from 'webextension-polyfill'
+import { property } from '@dword-design/functions'
 import styleCode from './assets/style.scss'
 
-const toggle = () => {
+const toggle = enabled => {
   let style = document.querySelector('style.accessibility-mode')
-  if (style) {
+  if (!enabled && style) {
     style.remove()
-  } else {
+  } else if (enabled && !style) {
     style = document.createElement('style')
     style.classList.add('accessibility-mode')
     style.type = 'text/css'
@@ -15,14 +17,11 @@ const toggle = () => {
 
 browser.storage.onChanged.addListener((changes, area) => {
   if (area === 'local' && 'enabled' in changes) {
-    toggle()
+    toggle(changes.enabled.newValue)
   }
 })
 
-const init = async () => {
-  if (await browser.storage.local.get('enabled')) {
-    toggle()
-  }
-}
+const init = async () =>
+  toggle(browser.storage.local.get('enabled') |> await |> property('enabled'))
 
 init()

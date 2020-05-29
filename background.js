@@ -1,4 +1,21 @@
+import browser from 'webextension-polyfill'
 import { property } from '@dword-design/functions'
+
+const update = enabled =>
+  browser.browserAction.setIcon({
+    path: `assets/${enabled ? 'icon.png' : 'icon-disabled.png'}`,
+  })
+
+browser.storage.onChanged.addListener((changes, area) => {
+  if (area === 'local' && 'enabled' in changes) {
+    update(changes.enabled.newValue)
+  }
+})
+
+const init = async () =>
+  update(browser.storage.local.get('enabled') |> await |> property('enabled'))
+
+init()
 
 browser.browserAction.onClicked.addListener(async () => {
   const enabled = !(
@@ -7,7 +24,4 @@ browser.browserAction.onClicked.addListener(async () => {
     |> property('enabled')
   )
   await browser.storage.local.set({ enabled })
-  chrome.browserAction.setIcon({
-    path: `assets/${enabled ? 'icon.png' : 'icon-disabled.png'}`,
-  })
 })
