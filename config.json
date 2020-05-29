@@ -1,5 +1,5 @@
 {
-  "name": "Accessibility Mode",
+  "name": "Accessible View",
   "browser_action": {
     "default_icon": "assets/icon.png"
   },

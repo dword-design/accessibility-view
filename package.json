@@ -1,9 +1,9 @@
 {
-  "name": "accessibility-mode",
+  "name": "accessible-view",
   "version": "1.0.0",
   "private": true,
   "description": "",
-  "repository": "dword-design/accessibility-mode",
+  "repository": "dword-design/accessible-view",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
   "main": "dist/index.js",
@@ -21,14 +21,15 @@
     "@dword-design/functions": "^1.1.2"
   },
   "devDependencies": {
-    "@dword-design/base": "^6.13.1",
-    "@dword-design/base-config-web-extension": "^1.5.0"
+    "@dword-design/base": "^6.15.0",
+    "@dword-design/base-config-web-extension": "^1.6.0"
   },
   "publishConfig": {
     "access": "public"
   },
   "baseConfig": {
     "name": "web-extension",
-    "startUrl": "https://de.wikipedia.org"
+    "startUrl": "https://de.wikipedia.org",
+    "chromeExtensionId": "ekpmnemcmjcimpnmofmiaeoggjkjohjg"
   }
 }
