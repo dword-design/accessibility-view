@@ -953,7 +953,7 @@
     fs-extra "^9.0.0"
     get-package-name "^1.0.0"
 
-"@dword-design/base-config-web-extension@../base-config-web-extension":
+"@dword-design/base-config-web-extension@../base-config-web-extension/":
   version "1.2.1"
   dependencies:
     "@dword-design/eslint-config" "^1.16.2"
@@ -968,6 +968,7 @@
     get-package-name "^1.1.0"
     load-pkg "^4.0.0"
     node-sass "^4.14.1"
+    raw-loader "^4.0.1"
     sass-loader "^8.0.2"
     style-loader "^1.2.1"
     webext-webpack-plugin dword-design/webext-webpack-plugin#fork
@@ -1072,6 +1073,16 @@
     prettier prettier/prettier#19545e049ea424273fb6d647eefd1787d998b333
     safe-require dword-design/node-safe-require#fork
     vue-eslint-parser "^7.0.0"
+
+"@dword-design/functions@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-1.1.2.tgz#a0785964548eacc2809b75b7dc9f3b84a8566480"
+  integrity sha512-20qJB41LEzZUZsh/kY93WpSaTzrij21P7o2Korhmo0uK01A4OYRNhkd3naWqUnz+aga3lg6sLF4rOWsm1x5y7g==
+  dependencies:
+    endent dword-design/endent#fork
+    lodash "^4.17.15"
+    p-is-promise "^3.0.0"
+    tinycolor2 "^1.4.1"
 
 "@dword-design/functions@^2.2.2", "@dword-design/functions@^2.2.4", "@dword-design/functions@^2.7.2":
   version "2.7.2"
@@ -3100,12 +3111,7 @@ ci-info@^1.5.0, ci-info@^1.6.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.6.0.tgz#2ca20dbb9ceb32d4524a683303313f0304b1e497"
   integrity sha512-vsGdkwSCDpWmP80ncATX7iea5DWQemg1UgCW5J8tqjU3lYw4FBYuj89J0CTVomA7BEfvSZd84GmHko+MxFQU2A==
 
-ci-info@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
-  integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
-
-ci-info@watson/ci-info#f43f6a1cefff47fb361c88cf4b943fdbcaafe540:
+ci-info@^2.0.0, ci-info@watson/ci-info#f43f6a1cefff47fb361c88cf4b943fdbcaafe540:
   version "2.0.0"
   resolved "https://codeload.github.com/watson/ci-info/tar.gz/f43f6a1cefff47fb361c88cf4b943fdbcaafe540"
 
@@ -4412,7 +4418,7 @@ end-of-stream@~1.1.0:
   dependencies:
     once "~1.3.0"
 
-endent@dword-design/endent#fork:
+endent@dword-design/endent#fork, "endent@github:dword-design/endent#fork":
   version "1.4.0"
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:
@@ -10285,6 +10291,14 @@ randomfill@^1.0.3:
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.0"
+
+raw-loader@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-4.0.1.tgz#14e1f726a359b68437e183d5a5b7d33a3eba6933"
+  integrity sha512-baolhQBSi3iNh1cglJjA0mYzga+wePk7vdEX//1dTFd+v4TsQlQE0jitJSNF1OIP82rdYulH7otaVmdlDaJ64A==
+  dependencies:
+    loader-utils "^2.0.0"
+    schema-utils "^2.6.5"
 
 rc@^1.0.1, rc@^1.1.6, rc@^1.2.8:
   version "1.2.8"

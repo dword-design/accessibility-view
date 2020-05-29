@@ -17,13 +17,19 @@
     "prepublishOnly": "base prepublishOnly",
     "test": "base test"
   },
+  "dependencies": {
+    "@dword-design/functions": "^1.1.2"
+  },
   "devDependencies": {
     "@dword-design/base": "^6.13.1",
-    "@dword-design/base-config-web-extension": "../base-config-web-extension",
+    "@dword-design/base-config-web-extension": "../base-config-web-extension/",
     "node-sass": "^4.14.1"
   },
   "publishConfig": {
     "access": "public"
   },
-  "baseConfig": "web-extension"
+  "baseConfig": {
+    "name": "web-extension",
+    "startUrl": "https://de.wikipedia.org"
+  }
 }
