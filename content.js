@@ -3,9 +3,10 @@ import styleCode from './assets/style.scss'
 
 const toggle = enabled => {
   let style = document.querySelector('style.accessibility-mode')
-  if (!enabled && style) {
+  if (style) {
     style.remove()
-  } else if (enabled && !style) {
+  }
+  if (enabled) {
     style = document.createElement('style')
     style.classList.add('accessibility-mode')
     style.type = 'text/css'

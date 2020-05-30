@@ -83,8 +83,7 @@ $background-light: rgba(#000, .07);
 }
 
 @include selector('a') {
-  color: purple !important;
-  text-decoration: underline !important;
+  color: saturate(#191FCC, 10%) !important;
 }
 
 @include selector('button', 'input[type=submit]') {
@@ -179,7 +178,9 @@ h4, h5, h6 {
   background: $background-light !important;
 }
 
-@include selector('[title]') {
+// annotations
+
+/*@include selector('[title]') {
   position: relative !important;
 
   &:before {
@@ -189,8 +190,8 @@ h4, h5, h6 {
     padding: .25rem .5rem !important;
     margin-right: .25rem !important;
   }
-}
+}*/
 
-@include selector('img:not([alt])', 'img[alt]:not([alt=""])') {
+/*@include selector('img:not([alt])', 'img[alt]:not([alt=""])') {
   border: 4px dashed red !important;
-}
+}*/
