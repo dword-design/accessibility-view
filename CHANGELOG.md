@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/dword-design/accessibility-view/compare/v1.3.0...v1.3.1) (2020-05-31)
+
+
+### Bug Fixes
+
+* add 128px icon ([cf412b2](https://github.com/dword-design/accessibility-view/commit/cf412b2ad0c7167554bc7164dd4e0c16f34afd0c))
+
 # [1.3.0](https://github.com/dword-design/accessibility-view/compare/v1.2.0...v1.3.0) (2020-05-31)
 
 
