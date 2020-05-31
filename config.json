@@ -5,8 +5,7 @@
   },
   "default_icon": {
     "48": "assets/icon-48.png",
-    "96": "assets/icon-96.png",
-    "128": "assets/icon-128.png"
+    "96": "assets/icon-96.png"
   },
   "permissions": [
     "storage"
