@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dword-design/accessible-view/compare/v1.1.0...v1.2.0) (2020-05-30)
+
+
+### Features
+
+* adjust colors ([b3f2e2b](https://github.com/dword-design/accessible-view/commit/b3f2e2b0f665396496ed9a740d6a09a6a87cd0bb))
+
 # [1.1.0](https://github.com/dword-design/accessible-view/compare/v1.0.0...v1.1.0) (2020-05-29)
 
 
