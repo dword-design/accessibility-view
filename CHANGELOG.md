@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/dword-design/accessibility-view/compare/v1.2.0...v1.3.0) (2020-05-31)
+
+
+### Bug Fixes
+
+* merge ([62ebbe8](https://github.com/dword-design/accessibility-view/commit/62ebbe8f6978a433a7f0b1e21d4524b153014975))
+
+
+### Features
+
+* rename ([5bd83e7](https://github.com/dword-design/accessibility-view/commit/5bd83e7c02906e6ab4d4ebd82ff9a6def4eec659))
+
 # [1.2.0](https://github.com/dword-design/accessible-view/compare/v1.1.0...v1.2.0) (2020-05-30)
 
 
