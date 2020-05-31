@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/dword-design/accessibility-view/compare/v1.3.4...v1.3.5) (2020-05-31)
+
+
+### Bug Fixes
+
+* trigger release ([ffa7bc1](https://github.com/dword-design/accessibility-view/commit/ffa7bc1870b3aed9c888c51e6b10bf1f63c102ef))
+
 ## [1.3.4](https://github.com/dword-design/accessibility-view/compare/v1.3.3...v1.3.4) (2020-05-31)
 
 
