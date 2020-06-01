@@ -1,0 +1,13 @@
+@mixin selector($selectors...) {
+
+  @each $selector in $selectors {
+    html #{$selector}:not(##{$unique-id}), #{$selector}:not(##{$unique-id}) {
+      @content;
+    }
+  }
+}
+
+%block {
+  width: 100% !important;
+    margin-bottom: 1rem !important;
+}

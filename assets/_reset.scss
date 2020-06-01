@@ -1,0 +1,67 @@
+@include selector('*') {
+
+  &, &:before, &:after {
+    position: static !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    transform: none !important;
+    transition: none !important;
+    pointer-events: auto !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    font-family: sans-serif !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    text-align: left !important;
+    overflow: visible !important;
+    font-weight: inherit !important;
+    font-style: normal !important;
+    list-style: none !important;
+    border-radius: 0 !important;
+    clip: auto !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    align-self: auto !important;
+    flex-basis: auto !important;
+    text-transform: none !important;
+    text-shadow: none !important;
+    float: none !important;
+    opacity: 1 !important;
+    text-indent: 0 !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    gap: 0 !important;
+    grid-template-rows: none !important;
+    grid-template-columns: none !important;
+    grid-row: auto / auto;
+    grid-column: auto / auto !important;
+    vertical-align: baseline !important;
+    letter-spacing: normal !important;
+  }
+
+  &:before, &:after {
+    display: none !important;
+  }
+
+  &:focus {
+    outline: -webkit-focus-ring-color auto 5px !important;
+  }
+}
+
+svg, button, a, span {
+  display: inline-block;
+}
