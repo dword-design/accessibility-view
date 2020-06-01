@@ -959,9 +959,9 @@
     get-package-name "^1.0.0"
 
 "@dword-design/base-config-web-extension@^1.6.0":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-config-web-extension/-/base-config-web-extension-1.6.1.tgz#30ea1c11b5669dc8395f554e61bb048232601b4a"
-  integrity sha512-UAv/oAg9gdG5Mr15tVC8R1iCybUSZ5ihvOwdzYY64nXcfeqObztuxQYAEiGdl53vBrBuEYKA3HBZNUM7sgeV2g==
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-web-extension/-/base-config-web-extension-1.6.3.tgz#b4970ede38876b36aa542c7712c23520023c2b86"
+  integrity sha512-66IWCBjwR9L6P4hBgtNKl6C7sdiJFU2rPjVWsNr8hIu/YrkgMapaU5RmBgvDIXX90EmMgD6f6V47GoTnP1BoWQ==
   dependencies:
     "@dword-design/eslint-config" "^1.16.2"
     "@dword-design/functions" "^1.1.2"
@@ -976,6 +976,7 @@
     get-package-name "^1.1.0"
     load-pkg "^4.0.0"
     node-sass "^4.14.1"
+    output-files "^1.1.16"
     raw-loader "^4.0.1"
     sass-loader "^8.0.2"
     semantic-release-chrome dword-design/semantic-release-chrome#fork
@@ -9459,7 +9460,7 @@ osenv@0, osenv@^0.1.4, osenv@^0.1.5:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
-output-files@^1.1.7:
+output-files@^1.1.16, output-files@^1.1.7:
   version "1.1.16"
   resolved "https://registry.yarnpkg.com/output-files/-/output-files-1.1.16.tgz#af8cac947a82dc0a11e74289cc6f975adcbf213a"
   integrity sha512-UygEyvla4WzpZBcFMzQrE+EFaIFLaOQlg6S+tMpsI5cKNnTAhAvv5mT/1b7ugsvg6j+lUpEDa2zieFV94Q6GfQ==
