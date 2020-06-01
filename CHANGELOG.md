@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/dword-design/accessibility-view/compare/v1.3.6...v1.3.7) (2020-06-01)
+
+
+### Bug Fixes
+
+* various fixes ([2d699e2](https://github.com/dword-design/accessibility-view/commit/2d699e23a67f532abbcfeadae62c82faee262c55))
+
 ## [1.3.6](https://github.com/dword-design/accessibility-view/compare/v1.3.5...v1.3.6) (2020-05-31)
 
 
