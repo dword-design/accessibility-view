@@ -1,3 +1,11 @@
+## [1.3.9](https://github.com/dword-design/accessibility-view/compare/v1.3.8...v1.3.9) (2020-06-01)
+
+
+### Bug Fixes
+
+* **config:** Update changed files ([34b1812](https://github.com/dword-design/accessibility-view/commit/34b181282ab3b45d31322605c581b324429e12f0))
+* fix spell ([793fa3a](https://github.com/dword-design/accessibility-view/commit/793fa3a36ce1bb760937fa635395b9aa8b14cea5))
+
 ## [1.3.8](https://github.com/dword-design/accessibility-view/compare/v1.3.7...v1.3.8) (2020-06-01)
 
 
