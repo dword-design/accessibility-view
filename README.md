@@ -14,7 +14,7 @@
 <!-- /BADGES -->
 
 <!-- DESCRIPTION/ -->
-
+Accessible View converts an arbitrary website into its accessibility relevant form.
 <!-- /DESCRIPTION -->
 
 <!-- INSTALL/ -->
