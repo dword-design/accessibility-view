@@ -1,3 +1,10 @@
+## [1.3.10](https://github.com/dword-design/accessibility-view/compare/v1.3.9...v1.3.10) (2020-06-01)
+
+
+### Bug Fixes
+
+* add developer.md ([51454a7](https://github.com/dword-design/accessibility-view/commit/51454a7048bf4b62885a067850c358385db98489))
+
 ## [1.3.9](https://github.com/dword-design/accessibility-view/compare/v1.3.8...v1.3.9) (2020-06-01)
 
 
