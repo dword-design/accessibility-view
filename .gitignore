@@ -8,6 +8,8 @@
 /.releaserc.json
 /.test.env.json
 /.vscode
+/artifacts
 /coverage
 /dist
 /node_modules
+source.zip

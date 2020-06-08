@@ -2,7 +2,7 @@ import { property } from '@dword-design/functions'
 
 const update = enabled =>
   browser.browserAction.setIcon({
-    path: `assets/icon${enabled ? '' : '-disabled'}.svg`,
+    path: `assets/icon${enabled ? '' : '-disabled'}.png`,
   })
 
 browser.storage.onChanged.addListener((changes, area) => {

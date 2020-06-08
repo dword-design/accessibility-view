@@ -2,13 +2,13 @@ import { property } from '@dword-design/functions'
 import styleCode from './assets/style.scss'
 
 const toggle = enabled => {
-  let style = document.querySelector('style.accessibility-mode')
+  let style = document.querySelector('style.accessibility-view')
   if (style) {
     style.remove()
   }
   if (enabled) {
     style = document.createElement('style')
-    style.classList.add('accessibility-mode')
+    style.classList.add('accessibility-view')
     style.type = 'text/css'
     style.appendChild(document.createTextNode(styleCode))
     document.getElementsByTagName('head')[0].appendChild(style)

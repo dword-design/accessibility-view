@@ -958,10 +958,10 @@
     fs-extra "^9.0.0"
     get-package-name "^1.0.0"
 
-"@dword-design/base-config-web-extension@^1.6.0":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-config-web-extension/-/base-config-web-extension-1.6.3.tgz#b4970ede38876b36aa542c7712c23520023c2b86"
-  integrity sha512-66IWCBjwR9L6P4hBgtNKl6C7sdiJFU2rPjVWsNr8hIu/YrkgMapaU5RmBgvDIXX90EmMgD6f6V47GoTnP1BoWQ==
+"@dword-design/base-config-web-extension@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-web-extension/-/base-config-web-extension-1.8.0.tgz#ce553ad0d8f7064a273f7152e188b81a7ef506c8"
+  integrity sha512-f+2NaeLdOI/xYaBOahiIb6c62iHyb5GzQG+YPjAJnLLpwKj1i0or+vtQTINhwd3sjxvQQl9saRxXmPCDRIVqKQ==
   dependencies:
     "@dword-design/eslint-config" "^1.16.2"
     "@dword-design/functions" "^1.1.2"
