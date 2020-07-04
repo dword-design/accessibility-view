@@ -1,3 +1,11 @@
+## [1.3.12](https://github.com/dword-design/accessibility-view/compare/v1.3.11...v1.3.12) (2020-07-04)
+
+
+### Bug Fixes
+
+* merge master ([f3258f5](https://github.com/dword-design/accessibility-view/commit/f3258f57528f67df4ac356fd108120bf5bec7f9b))
+* **config:** Update changed files ([86e3540](https://github.com/dword-design/accessibility-view/commit/86e35400b7726054e1493e21b878116336370ff6))
+
 ## [1.3.11](https://github.com/dword-design/accessibility-view/compare/v1.3.10...v1.3.11) (2020-06-08)
 
 
