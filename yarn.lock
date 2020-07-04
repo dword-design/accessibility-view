@@ -12941,7 +12941,7 @@ web-ext@^4.2.0:
     yargs "15.1.0"
     zip-dir "1.0.2"
 
-"webext-webpack-plugin@github:dword-design/webext-webpack-plugin#fork":
+webext-webpack-plugin@dword-design/webext-webpack-plugin#fork:
   version "0.0.8"
   resolved "https://codeload.github.com/dword-design/webext-webpack-plugin/tar.gz/ea8850fd3697ec57ae5bff4f4f2c551093ac97df"
   dependencies:
