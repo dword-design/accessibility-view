@@ -1,9 +1,9 @@
 {
-  "name": "accessible-view",
-  "version": "1.0.0",
+  "name": "@dword-design/accessibility-view",
+  "version": "1.3.11",
   "private": true,
-  "description": "",
-  "repository": "dword-design/accessible-view",
+  "description": "Accessibility View converts an arbitrary website into its accessibility relevant form.",
+  "repository": "dword-design/accessibility-view",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
   "main": "dist/index.js",
@@ -15,6 +15,7 @@
     "dev": "base dev",
     "prepare": "base prepare",
     "prepublishOnly": "base prepublishOnly",
+    "source": "base source",
     "test": "base test"
   },
   "dependencies": {
@@ -22,7 +23,7 @@
   },
   "devDependencies": {
     "@dword-design/base": "^6.15.0",
-    "@dword-design/base-config-web-extension": "^1.6.0"
+    "@dword-design/base-config-web-extension": "^1.8.0"
   },
   "publishConfig": {
     "access": "public"

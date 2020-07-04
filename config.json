@@ -1,8 +1,6 @@
 {
-  "name": "Accessible View",
-  "browser_action": {
-    "default_icon": "assets/icon.png"
-  },
+  "name": "Accessibility View",
+  "browser_action": {},
   "permissions": [
     "storage"
   ]
