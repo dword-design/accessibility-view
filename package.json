@@ -6,13 +6,14 @@
   "repository": "dword-design/accessibility-view",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
-  "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
+    "clean": "base clean",
     "commit": "base commit",
     "dev": "base dev",
+    "lint": "base lint",
     "prepare": "base prepare",
     "prepublishOnly": "base prepublishOnly",
     "source": "base source",
@@ -29,7 +30,7 @@
     "access": "public"
   },
   "baseConfig": {
-    "name": "web-extension",
+    "name": "@dword-design/web-extension",
     "startUrl": "https://de.wikipedia.org",
     "chromeExtensionId": "ekpmnemcmjcimpnmofmiaeoggjkjohjg"
   }

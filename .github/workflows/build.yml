@@ -1,19 +1,11 @@
-name: build
-on:
-  push:
-    branches:
-      - "**"
 jobs:
-  cancel-existing:
+  build:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
-      - uses: rokroskar/workflow-run-cleanup-action@v0.2.2
-        env:
+      - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  test:
-    needs: cancel-existing
-    runs-on: ubuntu-latest
-    steps:
+        uses: rokroskar/workflow-run-cleanup-action@v0.2.2
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
@@ -21,35 +13,24 @@ jobs:
       - run: git config --global user.email "actions@github.com"
       - run: git config --global user.name "GitHub Actions"
       - run: yarn --frozen-lockfile
+      - run: yarn clean
       - run: yarn test
-      - name: Push changed files
-        run: yarn dw-ci push-changed-files
+      - if: github.ref == 'refs/heads/master'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
-      - name: Coveralls
-        run: yarn dw-ci coveralls
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COVERALLS_SERVICE_NAME: github
-          COVERALLS_GIT_COMMIT: ${{ github.sha }}
-          COVERALLS_GIT_BRANCH: ${{ github.ref }}
-  release:
-    needs: test
-    if: github.ref == 'refs/heads/master'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: yarn --frozen-lockfile
-      - name: Release
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: Push changed files
+        run: yarn dw-ci push-changed-files
+      - if: github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+        name: Release
         run: yarn semantic-release
+name: build
+on:
+  push:
+    branches:
+      - "**"
