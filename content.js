@@ -1,4 +1,5 @@
 import { property } from '@dword-design/functions'
+
 import styleCode from './assets/style.scss'
 
 const toggle = enabled => {
@@ -14,14 +15,11 @@ const toggle = enabled => {
     document.getElementsByTagName('head')[0].appendChild(style)
   }
 }
-
 browser.storage.onChanged.addListener((changes, area) => {
   if (area === 'local' && 'enabled' in changes) {
     toggle(changes.enabled.newValue)
   }
 })
-
 const init = async () =>
   toggle(browser.storage.local.get('enabled') |> await |> property('enabled'))
-
 init()
