@@ -3,6 +3,15 @@
 
 ### Bug Fixes
 
+* remove icons temporarily ([75e24b8](https://github.com/dword-design/accessibility-view/commit/75e24b8cab84810dd4a42af6f0914b3a8d7a3f99))
+* restore icons ([7f9ef00](https://github.com/dword-design/accessibility-view/commit/7f9ef00eaf16f912cb854d4f2af45670d35a3a0f))
+* upgrades ([d85e47d](https://github.com/dword-design/accessibility-view/commit/d85e47d89a725ec9c886eb7ccd20725ea4573d35))
+
+## [1.3.15](https://github.com/dword-design/accessibility-view/compare/v1.3.14...v1.3.15) (2021-02-17)
+
+
+### Bug Fixes
+
 * upgrades ([d85e47d](https://github.com/dword-design/accessibility-view/commit/d85e47d89a725ec9c886eb7ccd20725ea4573d35))
 
 ## [1.3.14](https://github.com/dword-design/accessibility-view/compare/v1.3.13...v1.3.14) (2020-12-11)
