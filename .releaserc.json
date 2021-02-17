@@ -1,0 +1,44 @@
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "yarn prepublishOnly"
+      }
+    ],
+    [
+      "semantic-release-chrome",
+      {
+        "asset": "extension.zip",
+        "extensionId": "ekpmnemcmjcimpnmofmiaeoggjkjohjg",
+        "target": "draft"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "label": "Extension",
+            "path": "extension.zip"
+          }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "message": "chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ]
+}
