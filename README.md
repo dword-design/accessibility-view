@@ -1,5 +1,5 @@
 <!-- TITLE/ -->
-# @dword-design/accessibility-view
+# accessibility-view
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
