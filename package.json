@@ -4,6 +4,7 @@
   "private": true,
   "description": "Accessibility View converts an arbitrary website into its accessibility relevant form.",
   "repository": "dword-design/accessibility-view",
+  "funding": "https://www.buymeacoffee.com/dword",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
   "files": [
