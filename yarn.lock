@@ -1087,12 +1087,12 @@
     "@babel/plugin-proposal-pipeline-operator" "^7.5.0"
     "@babel/preset-env" "^7.6.3"
     "@dword-design/functions" "^2.2.2"
-    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
+    "@vue/babel-preset-jsx" "github:dword-design/jsx#fork-babel-preset-jsx"
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-macros "^3.0.1"
     babel-plugin-module-resolver "^4.0.0"
     babel-plugin-transform-imports "^2.0.0"
-    babel-plugin-wildcard dword-design/babel-plugin-wildcard#fork
+    babel-plugin-wildcard "github:dword-design/babel-plugin-wildcard#fork"
     depcheck-package-name "^1.0.0"
     find-up "^5.0.0"
     param-case "^3.0.3"
@@ -1136,8 +1136,8 @@
     node-sass "^5.0.0"
     raw-loader "^4.0.1"
     sass-loader "^10.0.0"
-    semantic-release-chrome dword-design/semantic-release-chrome#fork
-    webext-webpack-plugin dword-design/webext-webpack-plugin#fork
+    semantic-release-chrome "github:dword-design/semantic-release-chrome#fork"
+    webext-webpack-plugin "github:dword-design/webext-webpack-plugin#fork"
     webextension-polyfill "^0.7.0"
     webpack "^4.41.2"
     webpack-cli "^4.0.0"
@@ -1162,7 +1162,7 @@
     commitizen "^4.0.3"
     constant-case "^3.0.3"
     cz-conventional-changelog "^3.1.0"
-    depcheck dword-design/depcheck#fork
+    depcheck "github:dword-design/depcheck#fork"
     depcheck-detector-execa "^1.2.1"
     depcheck-detector-package-name "^1.0.0"
     depcheck-package-name "^1.0.0"
@@ -1229,7 +1229,7 @@
     depcheck-package-name "^1.0.0"
     eslint-config-airbnb-base "^14.2.1"
     eslint-config-prettier "^8.0.0"
-    eslint-import-resolver-babel-module dword-design/eslint-import-resolver-babel-module#fork
+    eslint-import-resolver-babel-module "github:dword-design/eslint-import-resolver-babel-module#fork"
     eslint-plugin-import "^2.22.1"
     eslint-plugin-json-format "^2.0.1"
     eslint-plugin-prefer-arrow "^1.1.6"
@@ -1257,7 +1257,7 @@
   resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-1.2.2.tgz#c19562d7b652f08fd91758779c46fdd59e13a58e"
   integrity sha512-x3yI/02X//VPBFiYedDojk2quzxRq1p4lyv0i66/rHF+T5pmh95OZcASobQPWMjHyTAOWdrI91vpphhKZnAuig==
   dependencies:
-    endent dword-design/endent#fork
+    endent "github:dword-design/endent#fork"
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
@@ -1768,6 +1768,7 @@
 
 "@vue/babel-preset-jsx@github:dword-design/jsx#fork-babel-preset-jsx":
   version "1.1.2"
+  uid a73cb9961541a60a66b1b99a69a32e00bc66d336
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/a73cb9961541a60a66b1b99a69a32e00bc66d336"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
@@ -1786,6 +1787,7 @@
 
 "@vue/babel-sugar-inject-h@dword-design/jsx#fork-babel-sugar-inject-h":
   version "1.1.2"
+  uid cc36a2200c059120f37944615fb2ec0e22f8f3cc
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/cc36a2200c059120f37944615fb2ec0e22f8f3cc"
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
@@ -2712,6 +2714,7 @@ babel-plugin-transform-imports@^2.0.0:
 
 "babel-plugin-wildcard@github:dword-design/babel-plugin-wildcard#fork":
   version "6.0.0"
+  uid "691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   resolved "https://codeload.github.com/dword-design/babel-plugin-wildcard/tar.gz/691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   dependencies:
     rimraf "^2.6.2"
@@ -4254,6 +4257,7 @@ decompress-response@^3.3.0:
 
 dedent@0.7.0, dedent@dword-design/dedent#fork:
   version "0.7.0"
+  uid c8d46e5017d60504657c2d01b59082c0329a12a7
   resolved "https://codeload.github.com/dword-design/dedent/tar.gz/c8d46e5017d60504657c2d01b59082c0329a12a7"
   dependencies:
     babel-plugin-add-module-exports "^1.0.2"
@@ -4417,6 +4421,7 @@ depcheck-parser-babel@^1.2.0:
 
 "depcheck@github:dword-design/depcheck#fork":
   version "0.0.1"
+  uid "8a9eb41006c2c6f9cbd79e4e68bf265e1c1df1dc"
   resolved "https://codeload.github.com/dword-design/depcheck/tar.gz/8a9eb41006c2c6f9cbd79e4e68bf265e1c1df1dc"
   dependencies:
     "@babel/parser" "^7.8.4"
@@ -4938,6 +4943,7 @@ eslint-config-prettier@^8.0.0:
 
 "eslint-import-resolver-babel-module@github:dword-design/eslint-import-resolver-babel-module#fork":
   version "5.1.2"
+  uid "97550c5b7626a9cf582ea2392b9749702a27473d"
   resolved "https://codeload.github.com/dword-design/eslint-import-resolver-babel-module/tar.gz/97550c5b7626a9cf582ea2392b9749702a27473d"
   dependencies:
     pkg-up "^2.0.0"
@@ -9430,6 +9436,7 @@ npm@^6.14.9:
     cmd-shim "^3.0.3"
     columnify "~1.5.4"
     config-chain "^1.1.12"
+    debuglog "*"
     detect-indent "~5.0.0"
     detect-newline "^2.1.0"
     dezalgo "~1.0.3"
@@ -9444,6 +9451,7 @@ npm@^6.14.9:
     has-unicode "~2.0.1"
     hosted-git-info "^2.8.8"
     iferr "^1.0.2"
+    imurmurhash "*"
     infer-owner "^1.0.4"
     inflight "~1.0.6"
     inherits "^2.0.4"
@@ -9462,8 +9470,14 @@ npm@^6.14.9:
     libnpx "^10.2.4"
     lock-verify "^2.1.0"
     lockfile "^1.0.4"
+    lodash._baseindexof "*"
     lodash._baseuniq "~4.6.0"
+    lodash._bindcallback "*"
+    lodash._cacheindexof "*"
+    lodash._createcache "*"
+    lodash._getnative "*"
     lodash.clonedeep "~4.5.0"
+    lodash.restparam "*"
     lodash.union "~4.6.0"
     lodash.uniq "~4.5.0"
     lodash.without "~4.4.0"
@@ -11404,6 +11418,7 @@ scss-tokenizer@^0.2.3:
 
 "semantic-release-chrome@github:dword-design/semantic-release-chrome#fork":
   version "0.0.0-development"
+  uid e7c5f0a41cf64b6d72c440ae9ac70c3ca216541e
   resolved "https://codeload.github.com/dword-design/semantic-release-chrome/tar.gz/e7c5f0a41cf64b6d72c440ae9ac70c3ca216541e"
   dependencies:
     "@semantic-release/error" "2.2.0"
@@ -13155,6 +13170,7 @@ web-ext@^4.2.0:
 
 "webext-webpack-plugin@github:dword-design/webext-webpack-plugin#fork":
   version "0.0.8"
+  uid ea8850fd3697ec57ae5bff4f4f2c551093ac97df
   resolved "https://codeload.github.com/dword-design/webext-webpack-plugin/tar.gz/ea8850fd3697ec57ae5bff4f4f2c551093ac97df"
   dependencies:
     web-ext "^4.2.0"
