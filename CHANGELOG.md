@@ -1,3 +1,10 @@
+## [1.3.20](https://github.com/dword-design/accessibility-view/compare/v1.3.19...v1.3.20) (2021-03-23)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v3 ([#13](https://github.com/dword-design/accessibility-view/issues/13)) ([8925759](https://github.com/dword-design/accessibility-view/commit/892575920ba1bfa9e822a5b7656e2e78334eecc1))
+
 ## [1.3.19](https://github.com/dword-design/accessibility-view/compare/v1.3.18...v1.3.19) (2021-03-22)
 
 
