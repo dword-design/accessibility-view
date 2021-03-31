@@ -9,6 +9,7 @@ browser.storage.onChanged.addListener((changes, area) => {
     update(changes.enabled.newValue)
   }
 })
+
 const init = async () =>
   update(browser.storage.local.get('enabled') |> await |> property('enabled'))
 init()

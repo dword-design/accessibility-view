@@ -20,6 +20,7 @@ browser.storage.onChanged.addListener((changes, area) => {
     toggle(changes.enabled.newValue)
   }
 })
+
 const init = async () =>
   toggle(browser.storage.local.get('enabled') |> await |> property('enabled'))
 init()

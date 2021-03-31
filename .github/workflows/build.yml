@@ -10,6 +10,8 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+          ref: ${{ github.event.pull_request.head.repo.full_name == github.repository &&
+            github.event.pull_request.head.ref || '' }}
       - uses: actions/setup-node@v2
         with:
           node-version: 12
@@ -21,11 +23,11 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           path: "**/__image_snapshots__/__diff_output__"
-      - run: yarn checkUnknownFiles
       - uses: codecov/codecov-action@v1
         with:
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
+      - run: yarn checkUnknownFiles
       - env:
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,6 +43,7 @@ jobs:
         run: yarn semantic-release
 name: build
 on:
+  pull_request: {}
   push:
     branches:
-      - "**"
+      - master
