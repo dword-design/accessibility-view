@@ -1,3 +1,10 @@
+## [1.3.23](https://github.com/dword-design/accessibility-view/compare/v1.3.22...v1.3.23) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v8 ([#23](https://github.com/dword-design/accessibility-view/issues/23)) ([7122708](https://github.com/dword-design/accessibility-view/commit/7122708df97f9465b6b875e9cb24c7f7d1c29072))
+
 ## [1.3.22](https://github.com/dword-design/accessibility-view/compare/v1.3.21...v1.3.22) (2021-04-12)
 
 
