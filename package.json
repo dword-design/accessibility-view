@@ -27,6 +27,9 @@
     "@dword-design/base": "^8.0.0",
     "@dword-design/base-config-web-extension": "^1.8.0"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "publishConfig": {
     "access": "public"
   },
