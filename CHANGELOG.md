@@ -1,3 +1,10 @@
+## [1.3.25](https://github.com/dword-design/accessibility-view/compare/v1.3.24...v1.3.25) (2021-05-28)
+
+
+### Bug Fixes
+
+* update config files ([8268502](https://github.com/dword-design/accessibility-view/commit/82685021d0c5c13352120249775b9c9772854ec8))
+
 ## [1.3.24](https://github.com/dword-design/accessibility-view/compare/v1.3.23...v1.3.24) (2021-05-03)
 
 
