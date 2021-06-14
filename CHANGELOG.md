@@ -1,3 +1,10 @@
+## [1.3.27](https://github.com/dword-design/accessibility-view/compare/v1.3.26...v1.3.27) (2021-06-14)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#28](https://github.com/dword-design/accessibility-view/issues/28)) ([e92a236](https://github.com/dword-design/accessibility-view/commit/e92a236e70cbda41f82533a1ea20e53b5bf06eb8))
+
 ## [1.3.26](https://github.com/dword-design/accessibility-view/compare/v1.3.25...v1.3.26) (2021-06-09)
 
 
