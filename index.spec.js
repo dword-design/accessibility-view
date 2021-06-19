@@ -1,4 +1,4 @@
-import { endent, mapValues } from '@dword-design/functions'
+import { delay, endent, mapValues } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 import execa from 'execa'
@@ -15,6 +15,7 @@ const screenshotTest = test =>
 
       const element = await this.page.waitForSelector('body > *')
       expect(await element.screenshot()).toMatchImageSnapshot(this)
+      await delay(1000)
     } finally {
       await server.close()
     }
