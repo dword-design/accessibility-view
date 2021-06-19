@@ -29,9 +29,7 @@ export default tester(
       form: endent`
         <form>
           <input type="text" value="Fermentum Ullamcorper Bibendum" />
-          <textarea>
-            Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </textarea>
+          <textarea>Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
           <input type="submit" value="Submit Input" />
           <button type="submit">Submit Button</button>
         </form>

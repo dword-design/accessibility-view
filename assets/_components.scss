@@ -1,14 +1,3 @@
-$html5-elements: (
-  nav,
-  header,
-  main,
-  footer,
-  aside,
-  form,
-  article,
-  section,
-);
-
 @include selector(html) {
   color: $text !important;
   font-size: 16px !important;
@@ -22,11 +11,13 @@ $html5-elements: (
 }
 
 @include selector(a) {
+  display: inline !important;
   color: $primary !important;
   font-weight: bold !important;
 }
 
 @include selector(button, 'input[type=submit]') {
+  display: inline-block !important;
   padding: .125rem .75rem !important;
   border: 2px solid $grey-light !important;
   border-radius: .5rem !important;
@@ -40,7 +31,6 @@ $html5-elements: (
 }
 
 @include selector('ul', 'ol') {
-  @extend %block;
 
   li {
     position: relative !important;
@@ -75,14 +65,23 @@ $html5-elements: (
   display: none !important;
 }
 
-@each $element in $html5-elements {
+$structural-elements: (
+  nav,
+  header,
+  main,
+  footer,
+  aside,
+  form,
+  article,
+  section,
+);
+
+@each $element in $structural-elements {
 
   @include selector($element) {
     position: relative !important;
     padding: 2rem 1rem 1rem 1rem !important;
     border: 2px solid $grey-light !important;
-
-    @extend %block;
 
     &:after {
       content: '#{$element}' !important;
@@ -164,8 +163,6 @@ $html5-elements: (
 
 @include selector('table') {
   border-collapse: collapse !important;
-
-  @extend %block;
 }
 
 @include selector('th', 'td') {
@@ -183,10 +180,6 @@ $html5-elements: (
   background: $background-light !important;
 }
 
-@include selector('p') {
-  @extend %block;
-}
-
 @include selector('code') {
   font-family: monospace !important;
 }
@@ -195,15 +188,11 @@ $html5-elements: (
   padding: 1rem !important;
   background: $background-light !important;
   font-family: monospace !important;
-
-  @extend %block;
 }
 
 @include selector('blockquote') {
   padding-left: 1rem !important;
   border-left: 3px solid $grey-light !important;
-
-  @extend %block;
 }
 
 @include selector('address') {
@@ -214,16 +203,10 @@ $html5-elements: (
   padding: 1rem !important;
   border: 1px solid $grey-light !important;
   box-shadow: inset 0 0 1rem 0 rgba(#000, .1) !important;
-
-  @extend %block;
 }
 
 @include selector('label') {
   width: 100% !important;
-}
-
-@include selector('dl') {
-  @extend %block;
 }
 
 @include selector('dt') {

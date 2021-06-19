@@ -1,4 +1,6 @@
-@include selector('*') {
+@include selector('body *') {
+  display: block !important;
+  margin-bottom: 1rem !important;
 
   &, &:before, &:after {
     position: static !important;
