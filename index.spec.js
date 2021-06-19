@@ -199,12 +199,6 @@ export default tester(
         </ul>
       `,
     } |> mapValues(screenshotTest)),
-    async live() {
-      await this.page.goto('https://de.wikipedia.org')
-      expect(
-        await this.page.screenshot({ fullPage: true })
-      ).toMatchImageSnapshot(this)
-    },
   },
   [
     { before: () => execa.command('base prepublishOnly') },
@@ -225,11 +219,11 @@ export default tester(
         )
 
         const backgroundPage = await backgroundTarget.page()
-        await backgroundPage.evaluate(() => {
+        await backgroundPage.evaluate(() =>
           window.chrome.tabs.query({ active: true }, tabs =>
             window.chrome.browserAction.onClicked.dispatch(tabs[0])
           )
-        })
+        )
       },
     },
   ]
