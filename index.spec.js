@@ -35,6 +35,7 @@ export default tester(
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
         </blockquote>
       `,
+      bold: '<div>Morbi <b>leo risus</b>, porta ac consectetur ac</div>',
       code: endent`
         <pre>
           <code>
@@ -58,6 +59,11 @@ export default tester(
           <dd>zuzüglich</dd>
         </dl>
       `,
+      'display: none': endent`
+        <style>.hidden { display: none }</style>
+        <div>Foo <span class="hidden">bar</span></div>
+      `,
+      emphasis: '<div>Morbi <em>leo risus</em>, porta ac consectetur ac</div>',
       footer:
         '<footer>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</footer>',
       form: endent`
@@ -86,6 +92,7 @@ export default tester(
           Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
         </div>
       `,
+      'horizontal rule': '<hr>',
       img: "<img src=\"data:image/svg+xml,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z'/%3E%3C/svg%3E\">",
       'inline list elements': endent`
         <ul>
@@ -94,6 +101,7 @@ export default tester(
           <li style="display: inline">Baz</li>
         </ul>
       `,
+      italic: '<div>Morbi <i>leo risus</i>, porta ac consectetur ac</div>',
       link: '<div>Morbi <a href="https://google.com">leo risus</a>, porta ac consectetur ac</div>',
       main: '<main>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</main>',
       nav: '<nav>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</nav>',
@@ -111,10 +119,32 @@ export default tester(
         <a>Foo bar</a>
       `,
       role: '<div role="navigation">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>',
+      'script tag in body': endent`
+        <body>
+          <div>
+            <script>document.ready(() => {})</script>
+            Foo bar
+          </div>
+        </body>
+      `,
       section:
         '<section>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</section>',
       span: '<div>Morbi <span>leo risus</span>, porta ac consectetur ac</div>',
-      svg: '<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>',
+      strong:
+        '<div>Morbi <strong>leo risus</strong>, porta ac consectetur ac</div>',
+      'style tag in body': endent`
+        <body>
+          <div>
+            <style>a { color: red }</style>
+            Foo bar
+          </div>
+        </body>
+      `,
+      svg: endent`
+        <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/>
+        </svg>
+      `,
       table: endent`
         <table>
           <tr>
@@ -147,6 +177,14 @@ export default tester(
           </tr>
         </table>
       `,
+      title: endent`
+        <head>
+          <title>Foo bar</title>
+        </head>
+        <body>
+          <div>Bar baz</div>
+        </body>
+      `,
       'unordered list': endent`
         <ul>
           <li>Foo</li>
@@ -155,6 +193,12 @@ export default tester(
         </ul>
       `,
     } |> mapValues(screenshotTest)),
+    async live() {
+      await this.page.goto('https://de.wikipedia.org')
+      expect(
+        await this.page.screenshot({ fullPage: true })
+      ).toMatchImageSnapshot(this)
+    },
   },
   [
     { before: () => execa.command('base prepublishOnly') },

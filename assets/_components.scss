@@ -11,21 +11,19 @@
 }
 
 @include selector(a) {
-  display: inline !important;
   color: $primary !important;
   font-weight: bold !important;
 }
 
-@include selector(svg) {
-  display: inline-block !important;
+@include selector(b, strong) {
+  font-weight: bold !important;
 }
 
-@include selector(span) {
-  display: inline-block !important;
+@include selector(i, em) {
+  font-weight: italic !important;
 }
 
 @include selector(button, 'input[type=submit]') {
-  display: inline-block !important;
   padding: .125rem .75rem !important;
   border: 2px solid $grey-light !important;
   border-radius: .5rem !important;
@@ -39,6 +37,8 @@
 }
 
 @include selector(ul, ol) {
+  width: 100% !important;
+  margin-bottom: 1rem !important;
 
   li {
     position: relative !important;
@@ -90,6 +90,7 @@ $structural-elements: (
     position: relative !important;
     padding: 2rem 1rem 1rem 1rem !important;
     border: 2px solid $grey-light !important;
+    margin-bottom: 1rem !important;
 
     &:after {
       content: '#{$element}' !important;
@@ -131,8 +132,6 @@ $structural-elements: (
 @for $index from 1 through 6 {
 
   @include selector(h#{$index}) {
-    width: 100% !important;
-    flex-direction: row !important;
     font-size: #{1 + (6 - $index) * .2}rem !important;
     line-height: #{1.9 - (6 - $index) * .15} !important;
     font-weight: bold !important;
@@ -147,7 +146,6 @@ $structural-elements: (
 }
 
 @include selector('input[type=text]', 'input[type=email]', 'input[type=password]', 'input[type=search]', 'textarea') {
-  width: 100% !important;
   padding: .125rem .75rem !important;
   border: 2px solid $grey-light !important;
   margin-bottom: .5rem !important;
@@ -155,7 +153,6 @@ $structural-elements: (
 }
 
 @include selector(select) {
-  width: 100% !important;
   padding: .25rem .5rem !important;
   border: 2px solid $grey-light !important;
   margin-bottom: .5rem !important;
@@ -167,16 +164,10 @@ $structural-elements: (
 }
 
 @include selector(table) {
-  display: table !important;
   border-collapse: collapse !important;
 }
 
-@include selector(tr) {
-  display: table-row !important;
-}
-
 @include selector(th, td) {
-  display: table-cell !important;
   padding: 1rem !important;
   border: 2px solid $grey-light !important;
 
@@ -227,4 +218,14 @@ $structural-elements: (
 @include selector(img, svg) {
   align-self: flex-start !important;
   border: 1px solid $grey-light !important;
+}
+
+@include selector(p) {
+  margin-bottom: 1rem !important;
+}
+
+@include selector(hr) {
+  height: 2px !important;
+  margin-bottom: 1rem !important;
+  background: $grey-light !important;
 }
