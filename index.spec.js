@@ -23,13 +23,54 @@ const screenshotTest = test =>
 export default tester(
   {
     ...({
+      address: endent`
+        <address>
+          Mirecourtstr. 8
+          53225 Bonn
+        </address>
+      `,
+      'aria-hidden': '<div>Foo <span aria-hidden=true>bar</span></div>',
+      blockquote: endent`
+        <blockquote>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+        </blockquote>
+      `,
+      code: endent`
+        <pre>
+          <code>
+            export default () => {
+              console.log('foo')
+            }
+          </code>
+        </pre>
+      `,
       color: '<div color="red">Morbi leo risus, porta ac consectetur ac</div>',
+      'description list': endent`
+        <dl>
+          <dt>allg.</dt>
+          <dd>allgemein</dd>
+
+          <dt>bez.</dt>
+          <dd>bezüglich</dd>
+          <dd>bezahlt</dd>
+
+          <dt>zzgl.</dt>
+          <dd>zuzüglich</dd>
+        </dl>
+      `,
       footer:
         '<footer>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</footer>',
       form: endent`
         <form>
-          <input type="text" value="Fermentum Ullamcorper Bibendum" />
-          <textarea>Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+          <label for="input">Input:</label>
+          <input id="input" type="text" value="Fermentum Ullamcorper Bibendum" />
+          <label>
+            Textarea:
+            <textarea>Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+          </label>
+          <select>
+            <option value="foo" selected>Foo bar</option>
+          </select>
           <input type="submit" value="Submit Input" />
           <button type="submit">Submit Button</button>
         </form>
@@ -45,6 +86,7 @@ export default tester(
           Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
         </div>
       `,
+      img: "<img src=\"data:image/svg+xml,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z'/%3E%3C/svg%3E\">",
       'inline list elements': endent`
         <ul>
           <li style="display: inline">Foo</li>
@@ -52,12 +94,59 @@ export default tester(
           <li style="display: inline">Baz</li>
         </ul>
       `,
-      link: '<div>Morbi <a href="https://google.com">leo risus</a>, porta ac consectetur ac',
+      link: '<div>Morbi <a href="https://google.com">leo risus</a>, porta ac consectetur ac</div>',
       main: '<main>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</main>',
       nav: '<nav>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</nav>',
+      'ordered list': endent`
+        <ol>
+          <li>Foo</li>
+          <li>Bar</li>
+          <li>Baz</li>
+        </ol>
+      `,
+      'override important style': endent`
+        <style>
+          body a { color: red !important }
+        </style>
+        <a>Foo bar</a>
+      `,
       role: '<div role="navigation">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>',
       section:
         '<section>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</section>',
+      span: '<div>Morbi <span>leo risus</span>, porta ac consectetur ac</div>',
+      svg: '<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>',
+      table: endent`
+        <table>
+          <tr>
+            <th>Foo</th>
+            <th>Bar</th>
+          </tr>
+          <tr>
+            <td>Foo</td>
+            <td>Bar</td>
+          </tr>
+          <tr>
+            <td>Foo</td>
+            <td>Bar</td>
+          </tr>
+        </table>
+      `,
+      'table with role': endent`
+        <table role="navigation">
+          <tr>
+            <th>Foo</th>
+            <th>Bar</th>
+          </tr>
+          <tr>
+            <td>Foo</td>
+            <td>Bar</td>
+          </tr>
+          <tr>
+            <td>Foo</td>
+            <td>Bar</td>
+          </tr>
+        </table>
+      `,
       'unordered list': endent`
         <ul>
           <li>Foo</li>
