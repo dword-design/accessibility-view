@@ -20,7 +20,7 @@
 }
 
 @include selector(i, em) {
-  font-weight: italic !important;
+  font-style: italic !important;
 }
 
 @include selector(button, 'input[type=submit]') {
@@ -89,8 +89,8 @@ $structural-elements: (
   @include selector($element) {
     position: relative !important;
     padding: 2rem 1rem 1rem 1rem !important;
-    border: 2px solid $grey-light !important;
     margin-bottom: 1rem !important;
+    border: 2px solid $grey-light !important;
 
     &:after {
       content: '#{$element}' !important;
@@ -105,8 +105,8 @@ $structural-elements: (
 
 @include selector('[role]') {
   position: relative !important;
-  margin-bottom: 1rem !important;
   min-width: 10rem !important;
+  margin-bottom: 1rem !important;
 
   &:not(iframe) {
     padding: 2rem 1rem 1rem 1rem !important;
@@ -145,7 +145,12 @@ $structural-elements: (
   }
 }
 
+@include selector(label) {
+  width: 100% !important;
+}
+
 @include selector('input[type=text]', 'input[type=email]', 'input[type=password]', 'input[type=search]', 'textarea') {
+  width: 100% !important;
   padding: .125rem .75rem !important;
   border: 2px solid $grey-light !important;
   margin-bottom: .5rem !important;
@@ -153,6 +158,7 @@ $structural-elements: (
 }
 
 @include selector(select) {
+  width: 100% !important;
   padding: .25rem .5rem !important;
   border: 2px solid $grey-light !important;
   margin-bottom: .5rem !important;
@@ -160,6 +166,7 @@ $structural-elements: (
 }
 
 @include selector(textarea) {
+  width: 100% !important;
   height: 8rem !important;
 }
 

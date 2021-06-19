@@ -93,6 +93,7 @@ export default tester(
         </div>
       `,
       'horizontal rule': '<hr>',
+      iframe: '<iframe></iframe>',
       img: "<img src=\"data:image/svg+xml,%3Csvg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z'/%3E%3C/svg%3E\">",
       'inline list elements': endent`
         <ul>
@@ -105,6 +106,11 @@ export default tester(
       link: '<div>Morbi <a href="https://google.com">leo risus</a>, porta ac consectetur ac</div>',
       main: '<main>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</main>',
       nav: '<nav>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</nav>',
+      'nested containers': endent`
+        <main>
+          <header>Foo bar</header>
+        </main>
+      `,
       'ordered list': endent`
         <ol>
           <li>Foo</li>
