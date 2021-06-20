@@ -1219,66 +1219,10 @@
     webpack-cli "^4.0.0"
     webpackbar "^4.0.0"
 
-"@dword-design/base@^8.0.0":
-  version "8.1.9"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-8.1.9.tgz#7bcfa922f1a9d888ed6908b2921144da7bb27032"
-  integrity sha512-v7kcRDjgq64TZHD/2LbTiEvQIaXD1+SNJTJF/K2+IY2kFruyXyz1o4TQngaPyDAog2yCx9qKM+a7azY2rOhyAw==
-  dependencies:
-    "@babel/core" "^7.6.4"
-    "@babel/register" "^7.6.2"
-    "@commitlint/cli" "^12.0.0"
-    "@commitlint/config-conventional" "^12.0.0"
-    "@dword-design/babel-config" "^2.0.0"
-    "@dword-design/base-config-node" "^1.6.0"
-    "@dword-design/ci" "^3.0.0"
-    "@dword-design/eslint-config" "^2.0.0"
-    "@dword-design/functions" "^4.0.0"
-    "@semantic-release/changelog" "^5.0.0"
-    "@semantic-release/git" "^9.0.0"
-    ajv-cli "^5.0.0"
-    commitizen "^4.0.3"
-    constant-case "^3.0.3"
-    cz-conventional-changelog "^3.1.0"
-    depcheck "^1.4.1"
-    depcheck-detector-execa "^2.0.0"
-    depcheck-detector-package-name "^2.0.0"
-    depcheck-package-name "^2.0.0"
-    depcheck-parser-babel "^2.0.0"
-    eslint "~7.28.0"
-    execa "^5.0.0"
-    expect "^27.0.0"
-    expect-mocha-image-snapshot "^2.0.0"
-    expect-mocha-snapshot "^2.1.1"
-    find-up "^5.0.0"
-    fs-extra "^10.0.0"
-    get-projectz-readme-section-regex "^3.0.0"
-    globby "^11.0.1"
-    hosted-git-info "^4.0.0"
-    husky "^6.0.0"
-    ignore "^5.1.4"
-    import-cwd "^3.0.0"
-    is-ci "^3.0.0"
-    load-pkg "^4.0.0"
-    make-cli "^2.0.0"
-    mocha "^9.0.0"
-    mocha-ui-exports-auto-describe "^2.0.0"
-    nyc "^15.0.0"
-    output-files "^2.0.0"
-    package-name-regex "^2.0.0"
-    parse-git-config "^3.0.0"
-    plugin-name-to-package-name "^0.1.1"
-    safe-readfile "^1.0.2"
-    semantic-release "^17.0.3"
-    sort-keys "^4.2.0"
-    sort-package-json "~1.50.0"
-    spdx-expression-parse "^3.0.0"
-    spdx-license-list "^6.1.0"
-    std-env "^2.3.0"
-    yaml "^1.8.2"
-
-"@dword-design/base@dword-design/base#no-xvfb":
-  version "8.1.9"
-  resolved "https://codeload.github.com/dword-design/base/tar.gz/cffd91f91de5fcf9420085c3719900f22d8d0e08"
+"@dword-design/base@^8.1.10":
+  version "8.1.10"
+  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-8.1.10.tgz#cdbe75993bc61e59eced2f97ed8adaca3769b4ba"
+  integrity sha512-/c8eNXT1PCilzTtJ4a011L2cP+pPgEAKwxSf1c3x1fRYtZhd4SOc2Tdj63yGnFlW9otRXi6ZxgTDNBiyaTIJ/Q==
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/register" "^7.6.2"
@@ -11133,13 +11077,6 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-sleep@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/sleep/-/sleep-6.1.0.tgz#5507b520556a82ffb983d39123c5459470fa2a9e"
-  integrity sha512-Z1x4JjJxsru75Tqn8F4tnOFeEu3HjtITTsumYUiuz54sGKdISgLCek9AUlXlVVrkhltRFhNUsJDJE76SFHTDIQ==
-  dependencies:
-    nan "^2.13.2"
-
 slice-ansi@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-4.0.0.tgz#500e8dd0fd55b05815086255b3195adf2a45fe6b"
@@ -12748,13 +12685,6 @@ xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
-
-xvfb@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/xvfb/-/xvfb-0.4.0.tgz#52c4ddb991b7c5ae9d175d35452718b734781e85"
-  integrity sha512-g55AbjcBL4Bztfn7kiUrR0ne8mMUsFODDJ+HFGf5OuHJqKKccpExX2Qgn7VF2eImw1eoh6+riXHser1J4agrFA==
-  optionalDependencies:
-    sleep "6.1.0"
 
 y18n@^4.0.0:
   version "4.0.3"

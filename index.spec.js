@@ -4,9 +4,6 @@ import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 import execa from 'execa'
 import express from 'express'
 import P from 'path'
-import Xvfb from 'xvfb'
-
-const xvfb = new Xvfb()
 
 const screenshotTest = test =>
   async function () {
@@ -20,7 +17,6 @@ const screenshotTest = test =>
       expect(await element.screenshot()).toMatchImageSnapshot(this)
     } finally {
       await server.close()
-      // await delay(6000)
     }
   }
 
@@ -206,38 +202,15 @@ export default tester(
   },
   [
     { before: () => execa.command('base prepublishOnly') },
-    { afterEach: () => xvfb.stopSync(), beforeEach: () => xvfb.startSync() },
     testerPluginPuppeteer({
       launchOptions: {
         args: [
-          '--disable-setuid-sandbox',
           `--load-extension=${P.join(process.cwd(), 'dist')}`,
           `--disable-extensions-except=${P.join(process.cwd(), 'dist')}`,
         ],
         headless: false,
       },
     }),
-    /* {
-      async after() {
-        await this.browser.close()
-      },
-      async afterEach() {
-        await this.page.close()
-      },
-      async before() {
-        this.browser = await puppeteer.launch({
-          args: [
-            '--disable-setuid-sandbox',
-            `--load-extension=${P.join(process.cwd(), 'dist')}`,
-            `--disable-extensions-except=${P.join(process.cwd(), 'dist')}`,
-          ],
-          headless: false,
-        })
-      },
-      async beforeEach() {
-        this.page = await this.browser.newPage()
-      },
-    }, */
     {
       async beforeEach() {
         // https://github.com/puppeteer/puppeteer/issues/2486#issuecomment-602116047
