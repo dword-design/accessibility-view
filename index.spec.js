@@ -1,6 +1,7 @@
-import { delay, endent, mapValues } from '@dword-design/functions'
+import { endent, mapValues } from '@dword-design/functions'
+import puppeteer from '@dword-design/puppeteer'
 import tester from '@dword-design/tester'
-import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
+// import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 import execa from 'execa'
 import express from 'express'
 import P from 'path'
@@ -15,7 +16,6 @@ const screenshotTest = test =>
 
       const element = await this.page.waitForSelector('body > *')
       expect(await element.screenshot()).toMatchImageSnapshot(this)
-      await delay(1000)
     } finally {
       await server.close()
     }
@@ -203,15 +203,37 @@ export default tester(
   },
   [
     { before: () => execa.command('base prepublishOnly') },
-    testerPluginPuppeteer({
+    /* testerPluginPuppeteer({
       launchOptions: {
         args: [
+          '--disable-setuid-sandbox',
           `--load-extension=${P.join(process.cwd(), 'dist')}`,
           `--disable-extensions-except=${P.join(process.cwd(), 'dist')}`,
         ],
         headless: false,
       },
-    }),
+    }), */
+    {
+      async after() {
+        await this.browser.close()
+      },
+      async afterEach() {
+        await this.page.close()
+      },
+      async before() {
+        this.browser = await puppeteer.launch({
+          args: [
+            '--disable-setuid-sandbox',
+            `--load-extension=${P.join(process.cwd(), 'dist')}`,
+            `--disable-extensions-except=${P.join(process.cwd(), 'dist')}`,
+          ],
+          headless: false,
+        })
+      },
+      async beforeEach() {
+        this.page = await this.browser.newPage()
+      },
+    },
     {
       async beforeEach() {
         // https://github.com/puppeteer/puppeteer/issues/2486#issuecomment-602116047
