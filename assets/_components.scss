@@ -1,14 +1,3 @@
-$html5-elements: (
-  nav,
-  header,
-  main,
-  footer,
-  aside,
-  form,
-  article,
-  section,
-);
-
 @include selector(html) {
   color: $text !important;
   font-size: 16px !important;
@@ -26,6 +15,14 @@ $html5-elements: (
   font-weight: bold !important;
 }
 
+@include selector(b, strong) {
+  font-weight: bold !important;
+}
+
+@include selector(i, em) {
+  font-style: italic !important;
+}
+
 @include selector(button, 'input[type=submit]') {
   padding: .125rem .75rem !important;
   border: 2px solid $grey-light !important;
@@ -39,8 +36,9 @@ $html5-elements: (
   }
 }
 
-@include selector('ul', 'ol') {
-  @extend %block;
+@include selector(ul, ol) {
+  width: 100% !important;
+  margin-bottom: 1rem !important;
 
   li {
     position: relative !important;
@@ -71,18 +69,28 @@ $html5-elements: (
   }
 }
 
-[aria-hidden=true] {
+@include selector('[aria-hidden=true]') {
   display: none !important;
 }
 
-@each $element in $html5-elements {
+$structural-elements: (
+  nav,
+  header,
+  main,
+  footer,
+  aside,
+  form,
+  article,
+  section,
+);
+
+@each $element in $structural-elements {
 
   @include selector($element) {
     position: relative !important;
     padding: 2rem 1rem 1rem 1rem !important;
+    margin-bottom: 1rem !important;
     border: 2px solid $grey-light !important;
-
-    @extend %block;
 
     &:after {
       content: '#{$element}' !important;
@@ -97,14 +105,11 @@ $html5-elements: (
 
 @include selector('[role]') {
   position: relative !important;
+  min-width: 10rem !important;
   margin-bottom: 1rem !important;
 
   &:not(iframe) {
     padding: 2rem 1rem 1rem 1rem !important;
-  }
-
-  &:not(img):not(svg) {
-    min-width: 10rem !important;
   }
 
   &:not(table) {
@@ -127,8 +132,6 @@ $html5-elements: (
 @for $index from 1 through 6 {
 
   @include selector(h#{$index}) {
-    width: 100% !important;
-    flex-direction: row !important;
     font-size: #{1 + (6 - $index) * .2}rem !important;
     line-height: #{1.9 - (6 - $index) * .15} !important;
     font-weight: bold !important;
@@ -142,6 +145,10 @@ $html5-elements: (
   }
 }
 
+@include selector(label) {
+  width: 100% !important;
+}
+
 @include selector('input[type=text]', 'input[type=email]', 'input[type=password]', 'input[type=search]', 'textarea') {
   width: 100% !important;
   padding: .125rem .75rem !important;
@@ -150,7 +157,7 @@ $html5-elements: (
   border-radius: .5rem !important;
 }
 
-@include selector('select') {
+@include selector(select) {
   width: 100% !important;
   padding: .25rem .5rem !important;
   border: 2px solid $grey-light !important;
@@ -158,17 +165,16 @@ $html5-elements: (
   border-radius: .5rem !important;
 }
 
-@include selector('textarea') {
+@include selector(textarea) {
+  width: 100% !important;
   height: 8rem !important;
 }
 
-@include selector('table') {
+@include selector(table) {
   border-collapse: collapse !important;
-
-  @extend %block;
 }
 
-@include selector('th', 'td') {
+@include selector(th, td) {
   padding: 1rem !important;
   border: 2px solid $grey-light !important;
 
@@ -179,62 +185,54 @@ $html5-elements: (
   }
 }
 
-@include selector('th') {
+@include selector(th) {
   background: $background-light !important;
 }
 
-@include selector('p') {
-  @extend %block;
-}
-
-@include selector('code') {
+@include selector(code) {
   font-family: monospace !important;
 }
 
-@include selector('pre') {
+@include selector(pre) {
   padding: 1rem !important;
   background: $background-light !important;
   font-family: monospace !important;
-
-  @extend %block;
 }
 
-@include selector('blockquote') {
+@include selector(blockquote) {
   padding-left: 1rem !important;
   border-left: 3px solid $grey-light !important;
-
-  @extend %block;
 }
 
-@include selector('address') {
+@include selector(address) {
   font-style: italic !important;
 }
 
-@include selector('iframe') {
+@include selector(iframe) {
   padding: 1rem !important;
   border: 1px solid $grey-light !important;
   box-shadow: inset 0 0 1rem 0 rgba(#000, .1) !important;
-
-  @extend %block;
 }
 
-@include selector('label') {
-  width: 100% !important;
-}
-
-@include selector('dl') {
-  @extend %block;
-}
-
-@include selector('dt') {
+@include selector(dt) {
   font-weight: bold !important;
 }
 
-@include selector('dd') {
+@include selector(dd) {
   padding-left: 2rem !important;
 }
 
 @include selector(img, svg) {
   align-self: flex-start !important;
   border: 1px solid $grey-light !important;
+}
+
+@include selector(p) {
+  margin-bottom: 1rem !important;
+}
+
+@include selector(hr) {
+  height: 2px !important;
+  margin-bottom: 1rem !important;
+  background: $grey-light !important;
 }
