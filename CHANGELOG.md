@@ -1,3 +1,10 @@
+## [1.3.28](https://github.com/dword-design/accessibility-view/compare/v1.3.27...v1.3.28) (2021-06-20)
+
+
+### Bug Fixes
+
+* tests and fixes ([#30](https://github.com/dword-design/accessibility-view/issues/30)) ([2d7c9ed](https://github.com/dword-design/accessibility-view/commit/2d7c9edfcac18f5bbab4c1aaa90e00f59cb5fd76))
+
 ## [1.3.27](https://github.com/dword-design/accessibility-view/compare/v1.3.26...v1.3.27) (2021-06-14)
 
 
