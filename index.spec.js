@@ -1,4 +1,4 @@
-import { endent, mapValues } from '@dword-design/functions'
+import { delay, endent, mapValues } from '@dword-design/functions'
 import puppeteer from '@dword-design/puppeteer'
 import tester from '@dword-design/tester'
 // import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
@@ -19,6 +19,7 @@ const screenshotTest = test =>
     } finally {
       await server.close()
     }
+    await delay(6000)
   }
 
 export default tester(
