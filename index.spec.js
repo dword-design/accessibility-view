@@ -18,8 +18,8 @@ const screenshotTest = test =>
       expect(await element.screenshot()).toMatchImageSnapshot(this)
     } finally {
       await server.close()
+      await delay(6000)
     }
-    await delay(6000)
   }
 
 export default tester(
