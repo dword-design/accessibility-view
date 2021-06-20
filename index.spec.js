@@ -1,10 +1,12 @@
-import { delay, endent, mapValues } from '@dword-design/functions'
-import puppeteer from '@dword-design/puppeteer'
+import { endent, mapValues } from '@dword-design/functions'
 import tester from '@dword-design/tester'
-// import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
+import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 import execa from 'execa'
 import express from 'express'
 import P from 'path'
+import Xvfb from 'xvfb'
+
+const xvfb = new Xvfb()
 
 const screenshotTest = test =>
   async function () {
@@ -18,7 +20,7 @@ const screenshotTest = test =>
       expect(await element.screenshot()).toMatchImageSnapshot(this)
     } finally {
       await server.close()
-      await delay(6000)
+      // await delay(6000)
     }
   }
 
@@ -204,7 +206,8 @@ export default tester(
   },
   [
     { before: () => execa.command('base prepublishOnly') },
-    /* testerPluginPuppeteer({
+    { afterEach: () => xvfb.stopSync(), beforeEach: () => xvfb.startSync() },
+    testerPluginPuppeteer({
       launchOptions: {
         args: [
           '--disable-setuid-sandbox',
@@ -213,8 +216,8 @@ export default tester(
         ],
         headless: false,
       },
-    }), */
-    {
+    }),
+    /* {
       async after() {
         await this.browser.close()
       },
@@ -234,7 +237,7 @@ export default tester(
       async beforeEach() {
         this.page = await this.browser.newPage()
       },
-    },
+    }, */
     {
       async beforeEach() {
         // https://github.com/puppeteer/puppeteer/issues/2486#issuecomment-602116047
