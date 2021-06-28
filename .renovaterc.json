@@ -1,6 +1,7 @@
 {
   "extends": [
-    ":semanticCommits"
+    ":semanticCommits",
+    ":semanticPrefixFix"
   ],
   "ignorePaths": [
     ".github/workflows/build.yml"
@@ -11,14 +12,5 @@
   "lockFileMaintenance": {
     "enabled": true
   },
-  "packageRules": [
-    {
-      "matchPaths": [
-        "package.json",
-        "yarn.lock"
-      ],
-      "semanticCommitType": "fix"
-    }
-  ],
   "semanticCommitScope": null
 }
