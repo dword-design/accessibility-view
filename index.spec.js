@@ -12,6 +12,7 @@ const screenshotTest = test =>
       .listen(3000)
     try {
       await this.page.goto('http://localhost:3000')
+      await this.page.waitForSelector('style.accessibility-view')
 
       const element = await this.page.waitForSelector('body > *')
       expect(await element.screenshot()).toMatchImageSnapshot(this)
