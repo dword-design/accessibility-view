@@ -10,7 +10,18 @@
     "maintenance"
   ],
   "lockFileMaintenance": {
+    "automerge": true,
     "enabled": true
   },
+  "packageRules": [
+    {
+      "automerge": true,
+      "matchCurrentVersion": ">=1.0.0",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    }
+  ],
   "semanticCommitScope": null
 }
