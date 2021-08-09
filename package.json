@@ -1,6 +1,6 @@
 {
   "name": "accessibility-view",
-  "version": "1.3.33",
+  "version": "1.3.34",
   "private": true,
   "description": "Accessibility View converts an arbitrary website into its accessibility relevant form.",
   "repository": "dword-design/accessibility-view",
