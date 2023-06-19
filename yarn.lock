@@ -1255,9 +1255,7 @@
     webpackbar "^4.0.0"
 
 "@dword-design/base@^8.1.10":
-  version "8.5.5"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-8.5.5.tgz#4b2a289db0eddeddfb89ea1f957126ef50739b2f"
-  integrity sha512-uYuuJ6gAMu85VRTWESHEYxiGDblzgypNKW7Ot8qH6L1WfnGY22XCyRpjXENexwA1DnmrzvxzVJsYG/UbvQv5gQ==
+  version "8.7.6"
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/register" "^7.6.2"
