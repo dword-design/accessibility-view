@@ -7,42 +7,36 @@
   "funding": "https://github.com/sponsors/dword-design",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@sebastianlandwehr.com>",
+  "type": "module",
   "files": [
     "dist"
   ],
   "scripts": {
     "checkUnknownFiles": "base checkUnknownFiles",
     "commit": "base commit",
-    "dev": "base dev",
+    "depcheck": "base depcheck",
     "lint": "base lint",
     "prepare": "base prepare",
-    "prepublishOnly": "base prepublishOnly",
-    "source": "base source",
     "test": "base test",
     "test:raw": "base test:raw"
   },
   "dependencies": {
-    "@dword-design/functions": "^4.0.0"
+    "@dword-design/functions": "^5",
+    "vite-plugin-babel": "^1.2.0",
+    "wxt": "^0.17.4"
   },
   "devDependencies": {
-    "@dword-design/base": "^8.1.10",
-    "@dword-design/base-config-web-extension": "^1.8.0",
-    "@dword-design/puppeteer": "^5.0.3",
+    "@dword-design/base": "^11.0.4",
+    "@dword-design/puppeteer": "^7.0.0",
     "@dword-design/tester": "^2.0.5",
-    "@dword-design/tester-plugin-puppeteer": "^2.1.16",
-    "execa": "^5.1.1",
+    "@dword-design/tester-plugin-puppeteer": "^3.0.0",
+    "execa": "^8.0.1",
     "express": "^4.17.1"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=18"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "baseConfig": {
-    "name": "@dword-design/web-extension",
-    "startUrl": "https://de.wikipedia.org",
-    "chromeExtensionId": "ekpmnemcmjcimpnmofmiaeoggjkjohjg",
-    "testInContainer": true
   }
 }

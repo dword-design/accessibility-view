@@ -1,7 +1,0 @@
-{
-  "name": "Accessibility View",
-  "browser_action": {},
-  "permissions": [
-    "storage"
-  ]
-}

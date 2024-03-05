@@ -3,24 +3,28 @@
     ":semanticCommits",
     ":semanticPrefixFix"
   ],
-  "ignorePaths": [
-    ".github/workflows/build.yml"
-  ],
+  "github-actions": {
+    "enabled": false
+  },
   "labels": [
     "maintenance"
   ],
   "lockFileMaintenance": {
     "automerge": true,
-    "enabled": true
+    "enabled": true,
+    "semanticCommitType": "chore"
   },
-  "packageRules": [
+  "rangeStrategy": "replace",
+  "regexManagers": [
     {
-      "automerge": true,
-      "matchCurrentVersion": ">=1.0.0",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ]
+      "datasourceTemplate": "github-tags",
+      "fileMatch": [
+        "\\.js$"
+      ],
+      "matchStrings": [
+        "(^|\\s)gitHubAction`(?<depName>.*?)@v(?<currentValue>.*?)`"
+      ],
+      "versioningTemplate": "npm"
     }
   ],
   "semanticCommitScope": null

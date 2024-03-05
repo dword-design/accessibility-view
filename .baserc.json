@@ -1,0 +1,16 @@
+{
+  "startUrl": "https://de.wikipedia.org",
+  "chromeExtensionId": "ekpmnemcmjcimpnmofmiaeoggjkjohjg",
+  "testInContainer": true,
+  "gitignore": [
+    ".output",
+    ".wxt"
+  ],
+  "allowedMatches": [
+    "assets",
+    "entrypoints",
+    "index.spec.js",
+    "public",
+    "wxt.config.js"
+  ]
+}

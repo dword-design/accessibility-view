@@ -9,31 +9,7 @@
         "npmPublish": false
       }
     ],
-    [
-      "@semantic-release/exec",
-      {
-        "prepareCmd": "yarn prepublishOnly"
-      }
-    ],
-    [
-      "semantic-release-chrome",
-      {
-        "asset": "extension.zip",
-        "extensionId": "ekpmnemcmjcimpnmofmiaeoggjkjohjg",
-        "target": "draft"
-      }
-    ],
-    [
-      "@semantic-release/github",
-      {
-        "assets": [
-          {
-            "label": "Extension",
-            "path": "extension.zip"
-          }
-        ]
-      }
-    ],
+    "@semantic-release/github",
     [
       "@semantic-release/git",
       {

@@ -49,29 +49,14 @@ Accessibility View converts an arbitrary website into its accessibility relevant
 <!-- /DESCRIPTION -->
 
 <!-- INSTALL/ -->
-## Recommended setup
-* Node.js 12.16.0
-* Yarn 1.21.1
-
 ## Install
-```bash
-$ yarn --frozen-lockfile
-```
 
-## Running a development server
 ```bash
-$ yarn dev [target]
-```
-Available targets are `firefox` and `chrome`. Default is `firefox`.
+# npm
+$ npm install accessibility-view
 
-## Building the extension for upload
-```bash
-$ yarn prepublishOnly
-```
-
-## Archiving the source for upload
-```bash
-$ yarn source
+# Yarn
+$ yarn add accessibility-view
 ```
 <!-- /INSTALL -->
 
@@ -112,5 +97,5 @@ Thanks a lot for your support! ❤️
 
 ## License
 
-[MIT License](https://opensource.org/licenses/MIT) © [Sebastian Landwehr](https://sebastianlandwehr.com)
+[MIT License](https://opensource.org/license/mit/) © [Sebastian Landwehr](https://sebastianlandwehr.com)
 <!-- /LICENSE -->
