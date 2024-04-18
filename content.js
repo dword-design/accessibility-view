@@ -1,6 +1,7 @@
 import { property } from '@dword-design/functions'
+import browser from 'webextension-polyfill'
 
-import styleCode from './assets/style.scss'
+import styleCode from './assets/style.scss?inline'
 
 const toggle = enabled => {
   let style = document.querySelector('style.accessibility-view')

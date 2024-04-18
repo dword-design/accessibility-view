@@ -3,8 +3,7 @@
 /.eslintrc.json
 /.nyc_output
 /.test.env.json
-/artifacts
 /coverage
 /dist
 /node_modules
-source.zip
+/vite.config.js

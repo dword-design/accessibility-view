@@ -6,27 +6,28 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: rokroskar/workflow-run-cleanup-action@v0.3.3
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           lfs: true
           ref: ${{ github.event.pull_request.head.repo.full_name == github.repository &&
             github.event.pull_request.head.ref || '' }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
       - run: git config --global user.email "actions@github.com"
       - run: git config --global user.name "GitHub Actions"
       - run: yarn --frozen-lockfile
-      - run: yarn test
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn test
       - if: failure()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Image Snapshot Diffs
           path: "**/__image_snapshots__/__diff_output__"
-      - uses: codecov/codecov-action@v2
+      - uses: codecov/codecov-action@v3
         with:
-          fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
       - run: yarn checkUnknownFiles
       - env:
@@ -34,11 +35,29 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         name: Push changed files
         run: yarn dw-ci push-changed-files
+      - if: github.ref == 'refs/heads/master'
+        run: yarn prepublishOnly
       - env:
+          FIREFOX_EXTENSION_ID: ${{ secrets.FIREFOX_EXTENSION_ID }}
+        if: github.ref == 'refs/heads/master'
+        run: yarn prepublishOnly firefox
+      - if: github.ref == 'refs/heads/master'
+        run: zip -r ../chrome.zip .
+        working-directory: dist/chrome
+      - if: github.ref == 'refs/heads/master'
+        run: zip -r ../firefox.zip .
+        working-directory: dist/firefox
+      - if: github.ref == 'refs/heads/master'
+        run: git archive --output=dist/firefox-sources.zip HEAD
+      - env:
+          CHROME_CLIENT_ID: ${{ secrets.CHROME_CLIENT_ID }}
+          CHROME_CLIENT_SECRET: ${{ secrets.CHROME_CLIENT_SECRET }}
+          CHROME_EXTENSION_ID: ${{ secrets.CHROME_EXTENSION_ID }}
+          CHROME_REFRESH_TOKEN: ${{ secrets.CHROME_REFRESH_TOKEN }}
+          FIREFOX_EXTENSION_ID: ${{ secrets.FIREFOX_EXTENSION_ID }}
+          FIREFOX_JWT_ISSUER: ${{ secrets.FIREFOX_JWT_ISSUER }}
+          FIREFOX_JWT_SECRET: ${{ secrets.FIREFOX_JWT_SECRET }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
-          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
-          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
         if: github.ref == 'refs/heads/master'
         name: Release
         run: yarn semantic-release

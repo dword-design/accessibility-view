@@ -1,4 +1,5 @@
 import { property } from '@dword-design/functions'
+import browser from 'webextension-polyfill'
 
 const update = enabled =>
   browser.browserAction.setIcon({
