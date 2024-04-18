@@ -1,6 +1,6 @@
 {
   "name": "Accessibility View",
-  "browser_action": {},
+  "action": {},
   "permissions": [
     "storage"
   ]

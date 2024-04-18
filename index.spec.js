@@ -222,7 +222,7 @@ export default tester(
         const backgroundPage = await backgroundTarget.page()
         await backgroundPage.evaluate(() =>
           window.chrome.tabs.query({ active: true }, tabs =>
-            window.chrome.browserAction.onClicked.dispatch(tabs[0])
+            window.chrome.action.onClicked.dispatch(tabs[0])
           )
         )
       },
