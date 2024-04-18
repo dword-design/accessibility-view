@@ -1,6 +1,6 @@
 {
   "name": "Accessibility View",
-  "action": {},
+  "action": { "default_icon": {} },
   "permissions": [
     "storage"
   ]
