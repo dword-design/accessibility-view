@@ -1,3 +1,11 @@
+## [1.3.36](https://github.com/dword-design/accessibility-view/compare/v1.3.35...v1.3.36) (2024-08-14)
+
+
+### Bug Fixes
+
+* bump version ([9312f82](https://github.com/dword-design/accessibility-view/commit/9312f823604c5e43d185f4640f36c710d8e434d7))
+* bump version ([eafffcf](https://github.com/dword-design/accessibility-view/commit/eafffcf4c2a37c81ff135d38f08db09f876686fe))
+
 ## [1.3.35](https://github.com/dword-design/accessibility-view/compare/v1.3.34...v1.3.35) (2024-08-14)
 
 
