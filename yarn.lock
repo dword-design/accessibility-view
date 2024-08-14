@@ -1304,10 +1304,10 @@
     fs-extra "^11.0.0"
     micromatch "^4.0.2"
 
-"@dword-design/base-config-web-extension@^3.0.16":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-config-web-extension/-/base-config-web-extension-3.1.4.tgz#cc2a59b5d90d84342eccbed0ef2b285023b94264"
-  integrity sha512-Pw1ruG+n82RUeuY/p1c1Uo+d2eEDW+jfvKoTdn65wmIJocQAVzJ5aG33FyvAKTRIUm2oR6w5KW0CFD+rQsSKJg==
+"@dword-design/base-config-web-extension@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-web-extension/-/base-config-web-extension-3.1.5.tgz#217588c4851c8f8c32dd5d194136c09d7e4b4695"
+  integrity sha512-tZNWJfSbyeUwlltdjm4wURF9JwtZWzJPg6CZ3uwzuAtAebuHq8CrVPJNbbk0ytzVbkAgpuCsXHA+YQT3uet/cA==
   dependencies:
     "@dword-design/depcheck-parser-sass" "^4.0.4"
     "@dword-design/eslint-config" "^5.0.1"
@@ -8899,14 +8899,7 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
-load-pkg@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/load-pkg/-/load-pkg-4.0.0.tgz#f80a29aec2f6d02aadde714099fda4eea1b611f1"
-  integrity sha512-xS6uYdbUzHbwO5bExhtM8RsU6Z/fVEfZE4uZpWQOwVygLSUfXz7J97nGzJfZ+FFCZc0Weabn/wA3y1k9Q7Y4mw==
-  dependencies:
-    find-pkg "^2.0.0"
-
-"load-pkg@npm:@dword-design/load-pkg@^4":
+load-pkg@^4.0.0, "load-pkg@npm:@dword-design/load-pkg@^4":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@dword-design/load-pkg/-/load-pkg-4.0.0.tgz#201f76adeb44c64ed22d789591ab740573fe0a5b"
   integrity sha512-lZxKRusgIqSg2y4jLzZzMPWyhrGPGke3YYmAxj4SoJeUGV4CmvYyhJkJnfA7Yaov7GMXZi64nlhx8D809VDazg==
