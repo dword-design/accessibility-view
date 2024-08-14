@@ -50,8 +50,8 @@ Accessibility View converts an arbitrary website into its accessibility relevant
 
 <!-- INSTALL/ -->
 ## Recommended setup
-* Node.js 12.16.0
-* Yarn 1.21.1
+* Node.js 20.11.1
+* Yarn 1.22.19
 
 ## Install
 ```bash
@@ -60,18 +60,13 @@ $ yarn --frozen-lockfile
 
 ## Running a development server
 ```bash
-$ yarn dev [target]
+$ yarn dev [browser]
 ```
-Available targets are `firefox` and `chrome`. Default is `firefox`.
+Available browsers are `firefox` and `chrome`. Default is `firefox`.
 
 ## Building the extension for upload
 ```bash
-$ yarn prepublishOnly
-```
-
-## Archiving the source for upload
-```bash
-$ yarn source
+$ yarn prepublishOnly [browser]
 ```
 <!-- /INSTALL -->
 
@@ -112,5 +107,5 @@ Thanks a lot for your support! ❤️
 
 ## License
 
-[MIT License](https://opensource.org/licenses/MIT) © [Sebastian Landwehr](https://sebastianlandwehr.com)
+[MIT License](https://opensource.org/license/mit/) © [Sebastian Landwehr](https://sebastianlandwehr.com)
 <!-- /LICENSE -->
