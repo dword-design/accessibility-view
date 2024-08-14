@@ -1,3 +1,10 @@
+## [1.3.37](https://github.com/dword-design/accessibility-view/compare/v1.3.36...v1.3.37) (2024-08-14)
+
+
+### Bug Fixes
+
+* foo ([21cdd6d](https://github.com/dword-design/accessibility-view/commit/21cdd6d40a018b9278a739b0b420b864c06f7f08))
+
 ## [1.3.36](https://github.com/dword-design/accessibility-view/compare/v1.3.35...v1.3.36) (2024-08-14)
 
 
