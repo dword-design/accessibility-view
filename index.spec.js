@@ -1,8 +1,8 @@
-import { endent } from '@dword-design/functions'
-import tester from '@dword-design/tester'
-import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
-import { execaCommand } from 'execa'
-import express from 'express'
+import { endent } from '@dword-design/functions';
+import tester from '@dword-design/tester';
+import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer';
+import { execaCommand } from 'execa';
+import express from 'express';
 
 export default tester(
   {
@@ -197,14 +197,15 @@ export default tester(
         // https://github.com/puppeteer/puppeteer/issues/2486#issuecomment-1159705685
         const target = await this.browser.waitForTarget(
           t => t.type() === 'service_worker',
-        )
+        );
 
-        const worker = await target.worker()
+        const worker = await target.worker();
+
         await worker.evaluate(() =>
           self.chrome.tabs.query({ active: true }, tabs =>
             self.chrome.action.onClicked.dispatch(tabs[0]),
           ),
-        )
+        );
       },
     },
     {
@@ -212,17 +213,17 @@ export default tester(
         async function () {
           const server = express()
             .get('/', (req, res) => res.send(test))
-            .listen(3000)
-          try {
-            await this.page.goto('http://localhost:3000')
-            await this.page.waitForSelector('style.accessibility-view')
+            .listen(3000);
 
-            const element = await this.page.waitForSelector('body > *')
-            expect(await element.screenshot()).toMatchImageSnapshot(this)
+          try {
+            await this.page.goto('http://localhost:3000');
+            await this.page.waitForSelector('style.accessibility-view');
+            const element = await this.page.waitForSelector('body > *');
+            expect(await element.screenshot()).toMatchImageSnapshot(this);
           } finally {
-            await server.close()
+            await server.close();
           }
         },
     },
   ],
-)
+);
