@@ -6,4 +6,5 @@
 /coverage
 /dist
 /node_modules
+/userdata
 /vite.config.js
