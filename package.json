@@ -32,7 +32,7 @@
     "@dword-design/puppeteer": "^7.0.1",
     "@dword-design/tester": "^2.0.5",
     "@dword-design/tester-plugin-puppeteer": "^3.0.3",
-    "execa": "^8.0.1",
+    "execa": "^9.0.0",
     "express": "^4.17.1"
   },
   "engines": {
