@@ -27,7 +27,7 @@
     "webextension-polyfill": "^0.11.0"
   },
   "devDependencies": {
-    "@dword-design/base": "^11.1.0",
+    "@dword-design/base": "^12.0.0",
     "@dword-design/base-config-web-extension": "^3.1.5",
     "@dword-design/puppeteer": "^7.0.1",
     "@dword-design/tester": "^2.0.5",
