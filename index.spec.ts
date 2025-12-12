@@ -7,7 +7,7 @@ import { expect } from '@playwright/test';
 
 test.beforeAll(() => execaCommand('base build'));
 
-test.beforeEach(async ({ worker }) => worker.evaluate(() =>
+test.beforeEach(async ({ background }) => background.evaluate(() =>
   globalThis.chrome.tabs.query({ active: true }, tabs =>
     globalThis.chrome.action.onClicked.dispatch(tabs[0]),
   ),

@@ -26,14 +26,14 @@
     "verify": "base verify"
   },
   "devDependencies": {
-    "@dword-design/base": "^16",
+    "@dword-design/base": "^16.1.4",
     "@dword-design/base-config-web-extension": "^5.0.2",
-    "@dword-design/playwright-fixture-web-extension": "^1.0.0",
+    "@dword-design/playwright-fixture-web-extension": "^1.1.0",
     "@playwright/browser-chromium": "^1.57.0",
     "@playwright/test": "^1.57.0",
     "@types/express": "^5.0.6",
-    "execa": "^8.0.1",
-    "express": "^4.17.1",
+    "execa": "^9.6.1",
+    "express": "^5.2.1",
     "get-port": "^7.1.0",
     "sass": "^1.96.0"
   },
