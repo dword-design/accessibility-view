@@ -1,3 +1,10 @@
+## [1.3.39](https://github.com/dword-design/accessibility-view/compare/v1.3.38...v1.3.39) (2025-12-12)
+
+
+### Bug Fixes
+
+* make public ([aa7e53c](https://github.com/dword-design/accessibility-view/commit/aa7e53cf6997a2d19c166ab6c493a09cc9a1c253))
+
 ## [1.3.38](https://github.com/dword-design/accessibility-view/compare/v1.3.37...v1.3.38) (2025-12-12)
 
 
