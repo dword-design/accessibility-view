@@ -1,17 +1,15 @@
-import endent from 'endent';
 import { test } from '@dword-design/playwright-fixture-web-extension';
+import { expect } from '@playwright/test';
+import endent from 'endent';
 import { execaCommand } from 'execa';
 import express from 'express';
 import getPort from 'get-port';
-import { expect } from '@playwright/test';
 
-test.beforeAll(() => execaCommand('base build'));
+test.beforeAll(() => execaCommand('base build', { stdio: 'inherit' }));
 
-test.beforeEach(async ({ background }) => background.evaluate(() =>
-  globalThis.chrome.tabs.query({ active: true }, tabs =>
-    globalThis.chrome.action.onClicked.dispatch(tabs[0]),
-  ),
-));
+test.beforeEach(({ background }) =>
+  background.evaluate('chrome.action.onClicked.dispatch()'),
+);
 
 const tests = {
   address: endent`
@@ -193,7 +191,8 @@ const tests = {
 
 for (const [name, content] of Object.entries(tests)) {
   test(name, async ({ page }) => {
-    const port = await getPort()
+    const port = await getPort();
+
     const server = express()
       .get('/', (req, res) => res.send(content))
       .listen(port);

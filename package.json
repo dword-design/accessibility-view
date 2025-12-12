@@ -32,6 +32,7 @@
     "@playwright/browser-chromium": "^1.57.0",
     "@playwright/test": "^1.57.0",
     "@types/express": "^5.0.6",
+    "endent": "npm:@dword-design/endent@^1.4.7",
     "execa": "^9.6.1",
     "express": "^5.2.1",
     "get-port": "^7.1.0",

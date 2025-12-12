@@ -18,24 +18,15 @@
   font-weight: bold !important;
 }
 
-@include mixins.selector(
-  b,
-  strong
-) {
+@include mixins.selector(b, strong) {
   font-weight: bold !important;
 }
 
-@include mixins.selector(
-  i,
-  em
-) {
+@include mixins.selector(i, em) {
   font-style: italic !important;
 }
 
-@include mixins.selector(
-  button,
-  "input[type=submit]"
-) {
+@include mixins.selector(button, "input[type=submit]") {
   align-self: flex-start !important;
   margin-right: 0.5rem !important;
   margin-bottom: 0.5rem !important;
@@ -48,10 +39,7 @@
   }
 }
 
-@include mixins.selector(
-  ul,
-  ol
-) {
+@include mixins.selector(ul, ol) {
   width: 100% !important;
   margin-bottom: 1rem !important;
 
@@ -191,10 +179,7 @@ $structural-elements: (
   border-collapse: collapse !important;
 }
 
-@include mixins.selector(
-  th,
-  td
-) {
+@include mixins.selector(th, td) {
   padding: 1rem !important;
   border: 2px solid variables.$grey-light !important;
 
@@ -241,10 +226,7 @@ $structural-elements: (
   padding-left: 2rem !important;
 }
 
-@include mixins.selector(
-  img,
-  svg
-) {
+@include mixins.selector(img, svg) {
   align-self: flex-start !important;
   border: 1px solid variables.$grey-light !important;
 }

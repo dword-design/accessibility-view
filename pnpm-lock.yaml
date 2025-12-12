@@ -13,7 +13,7 @@ importers:
         version: 16.1.4(@types/node@25.0.1)(@typescript-eslint/parser@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/utils@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-core@3.5.25)(esbuild@0.27.1)(sass@1.96.0)
       '@dword-design/base-config-web-extension':
         specifier: ^5.0.2
-        version: 5.0.2(@dword-design/depcheck@0.0.12)(@types/node@25.0.1)(@typescript-eslint/parser@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/utils@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(jiti@2.6.1)(postcss@8.5.6)(prettier@3.7.4)(rollup@4.53.3)(sass@1.96.0)(semantic-release@25.0.2(typescript@5.9.3))(tsx@4.21.0)(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.1)(jiti@2.6.1)(sass@1.96.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.25(typescript@5.9.3))(yaml@2.8.2)
+        version: 5.0.2(@dword-design/depcheck@0.0.12)(@types/node@25.0.1)(@typescript-eslint/parser@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/utils@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-core@3.5.25)(esbuild@0.27.1)(jiti@2.6.1)(postcss@8.5.6)(prettier@3.7.4)(rollup@4.53.3)(sass@1.96.0)(semantic-release@25.0.2(typescript@5.9.3))(tsx@4.21.0)(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.1)(jiti@2.6.1)(sass@1.96.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.25(typescript@5.9.3))(yaml@2.8.2)
       '@dword-design/playwright-fixture-web-extension':
         specifier: ^1.1.0
         version: 1.1.0(@playwright/test@1.57.0)
@@ -26,6 +26,9 @@ importers:
       '@types/express':
         specifier: ^5.0.6
         version: 5.0.6
+      endent:
+        specifier: npm:@dword-design/endent@^1.4.7
+        version: '@dword-design/endent@1.4.7'
       execa:
         specifier: ^9.6.1
         version: 9.6.1
@@ -6204,7 +6207,7 @@ snapshots:
       - sass
       - supports-color
 
-  '@dword-design/base-config-web-extension@5.0.2(@dword-design/depcheck@0.0.12)(@types/node@25.0.1)(@typescript-eslint/parser@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/utils@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(jiti@2.6.1)(postcss@8.5.6)(prettier@3.7.4)(rollup@4.53.3)(sass@1.96.0)(semantic-release@25.0.2(typescript@5.9.3))(tsx@4.21.0)(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.1)(jiti@2.6.1)(sass@1.96.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.25(typescript@5.9.3))(yaml@2.8.2)':
+  '@dword-design/base-config-web-extension@5.0.2(@dword-design/depcheck@0.0.12)(@types/node@25.0.1)(@typescript-eslint/parser@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/utils@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-core@3.5.25)(esbuild@0.27.1)(jiti@2.6.1)(postcss@8.5.6)(prettier@3.7.4)(rollup@4.53.3)(sass@1.96.0)(semantic-release@25.0.2(typescript@5.9.3))(tsx@4.21.0)(typescript@5.9.3)(vite@7.2.7(@types/node@25.0.1)(jiti@2.6.1)(sass@1.96.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.25(typescript@5.9.3))(yaml@2.8.2)':
     dependencies:
       '@dword-design/base': 16.1.4(@types/node@25.0.1)(@typescript-eslint/parser@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/utils@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-core@3.5.25)(esbuild@0.27.1)(sass@1.96.0)
       '@dword-design/depcheck': 0.0.12
@@ -6229,7 +6232,9 @@ snapshots:
       - '@types/node'
       - '@typescript-eslint/parser'
       - '@typescript-eslint/utils'
+      - '@vue/compiler-core'
       - canvas
+      - esbuild
       - eslint-import-resolver-node
       - eslint-plugin-import
       - jiti
