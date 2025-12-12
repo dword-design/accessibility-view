@@ -9,11 +9,27 @@
         "npmPublish": false
       }
     ],
-    "@semantic-release/github",
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "label": "Extension",
+            "path": "extension.zip"
+          }
+        ]
+      }
+    ],
     [
       "@semantic-release/git",
       {
         "message": "chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "publishCmd": "pnpm wxt submit --chrome-zip dist/*-chrome.zip --firefox-zip dist/*-firefox.zip --firefox-sources-zip dist/*-sources.zip"
       }
     ]
   ]
