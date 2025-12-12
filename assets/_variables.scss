@@ -1,6 +1,7 @@
+@use "sass:color";
 $unique-id: "ryHekhLTP6BzxJWvqUdqp4uHmU";
 $text: #111;
 $text-light: #686868;
 $background-light: rgba(#000, 0.07);
-$primary: desaturate(#191fcc, 5%);
+$primary: color.adjust(#191fcc, $saturation: -5%);
 $grey-light: #ccc;

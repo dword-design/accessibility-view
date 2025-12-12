@@ -1,35 +1,38 @@
-@include selector(html) {
-  color: $text !important;
+@use "mixins";
+@use "variables";
+
+@include mixins.selector(html) {
+  color: variables.$text !important;
   font-size: 16px !important;
   line-height: 1.9 !important;
 }
 
-@include selector(body) {
+@include mixins.selector(body) {
   max-width: 800px !important;
   margin: 0 auto !important;
   padding: 1rem !important;
 }
 
-@include selector(a) {
-  color: $primary !important;
+@include mixins.selector(a) {
+  color: variables.$primary !important;
   font-weight: bold !important;
 }
 
-@include selector(
+@include mixins.selector(
   b,
   strong
 ) {
   font-weight: bold !important;
 }
 
-@include selector(
+@include mixins.selector(
   i,
   em
 ) {
   font-style: italic !important;
 }
 
-@include selector(
+@include mixins.selector(
   button,
   "input[type=submit]"
 ) {
@@ -37,15 +40,15 @@
   margin-right: 0.5rem !important;
   margin-bottom: 0.5rem !important;
   padding: 0.125rem 0.75rem !important;
-  border: 2px solid $grey-light !important;
+  border: 2px solid variables.$grey-light !important;
   border-radius: 0.5rem !important;
 
   &:hover {
-    background: $background-light !important;
+    background: variables.$background-light !important;
   }
 }
 
-@include selector(
+@include mixins.selector(
   ul,
   ol
 ) {
@@ -62,24 +65,24 @@
       position: absolute !important;
       left: 0 !important;
       display: inline-block !important;
-      color: $text !important;
+      color: variables.$text !important;
     }
   }
 }
 
-@include selector(ul) {
+@include mixins.selector(ul) {
   li::before {
     content: "●" !important; // •●⚫"\25CF" !important;
   }
 }
 
-@include selector(ol) {
+@include mixins.selector(ol) {
   li::before {
     content: "1." !important;
   }
 }
 
-@include selector("[aria-hidden=true]") {
+@include mixins.selector("[aria-hidden=true]") {
   display: none !important;
 }
 
@@ -95,11 +98,11 @@ $structural-elements: (
 );
 
 @each $element in $structural-elements {
-  @include selector($element) {
+  @include mixins.selector($element) {
     position: relative !important;
     margin-bottom: 1rem !important;
     padding: 2rem 1rem 1rem !important;
-    border: 2px solid $grey-light !important;
+    border: 2px solid variables.$grey-light !important;
 
     &::after {
       content: "#{$element}" !important;
@@ -107,12 +110,12 @@ $structural-elements: (
       top: 0.25rem !important;
       left: 1rem !important;
       display: inline-block !important;
-      color: $text-light !important;
+      color: variables.$text-light !important;
     }
   }
 }
 
-@include selector("[role]") {
+@include mixins.selector("[role]") {
   position: relative !important;
   min-width: 10rem !important;
   margin-bottom: 1rem !important;
@@ -122,7 +125,7 @@ $structural-elements: (
   }
 
   &:not(table) {
-    border: 2px solid $grey-light !important;
+    border: 2px solid variables.$grey-light !important;
   }
 
   &::after {
@@ -131,7 +134,7 @@ $structural-elements: (
     top: 0.25rem !important;
     left: 1rem !important;
     display: inline-block !important;
-    color: $text-light !important;
+    color: variables.$text-light !important;
     font-weight: normal !important;
     font-size: 1rem !important;
     line-height: 1.5 !important;
@@ -139,7 +142,7 @@ $structural-elements: (
 }
 
 @for $index from 1 through 6 {
-  @include selector(h#{$index}) {
+  @include mixins.selector(h#{$index}) {
     font-weight: bold !important;
     font-size: #{1 + (6 - $index) * 0.2}rem !important;
     line-height: #{1.9 - (6 - $index) * 0.15} !important;
@@ -148,16 +151,16 @@ $structural-elements: (
       content: "h#{$index}" !important;
       display: inline-block !important;
       margin-right: 0.25em !important;
-      color: $text-light !important;
+      color: variables.$text-light !important;
     }
   }
 }
 
-@include selector(label) {
+@include mixins.selector(label) {
   width: 100% !important;
 }
 
-@include selector(
+@include mixins.selector(
   "input[type=text]",
   "input[type=email]",
   "input[type=password]",
@@ -167,33 +170,33 @@ $structural-elements: (
   width: 100% !important;
   margin-bottom: 0.5rem !important;
   padding: 0.125rem 0.75rem !important;
-  border: 2px solid $grey-light !important;
+  border: 2px solid variables.$grey-light !important;
   border-radius: 0.5rem !important;
 }
 
-@include selector(select) {
+@include mixins.selector(select) {
   width: 100% !important;
   margin-bottom: 0.5rem !important;
   padding: 0.25rem 0.5rem !important;
-  border: 2px solid $grey-light !important;
+  border: 2px solid variables.$grey-light !important;
   border-radius: 0.5rem !important;
 }
 
-@include selector(textarea) {
+@include mixins.selector(textarea) {
   width: 100% !important;
   height: 8rem !important;
 }
 
-@include selector(table) {
+@include mixins.selector(table) {
   border-collapse: collapse !important;
 }
 
-@include selector(
+@include mixins.selector(
   th,
   td
 ) {
   padding: 1rem !important;
-  border: 2px solid $grey-light !important;
+  border: 2px solid variables.$grey-light !important;
 
   table[role] tr:first-child &,
   table[role] th:first-child & {
@@ -201,57 +204,57 @@ $structural-elements: (
   }
 }
 
-@include selector(th) {
-  background: $background-light !important;
+@include mixins.selector(th) {
+  background: variables.$background-light !important;
 }
 
-@include selector(code) {
+@include mixins.selector(code) {
   font-family: monospace !important;
 }
 
-@include selector(pre) {
+@include mixins.selector(pre) {
   padding: 1rem !important;
-  background: $background-light !important;
+  background: variables.$background-light !important;
   font-family: monospace !important;
 }
 
-@include selector(blockquote) {
+@include mixins.selector(blockquote) {
   padding-left: 1rem !important;
-  border-left: 3px solid $grey-light !important;
+  border-left: 3px solid variables.$grey-light !important;
 }
 
-@include selector(address) {
+@include mixins.selector(address) {
   font-style: italic !important;
 }
 
-@include selector(iframe) {
+@include mixins.selector(iframe) {
   padding: 1rem !important;
-  border: 1px solid $grey-light !important;
+  border: 1px solid variables.$grey-light !important;
   box-shadow: inset 0 0 1rem 0 rgba(#000, 0.1) !important;
 }
 
-@include selector(dt) {
+@include mixins.selector(dt) {
   font-weight: bold !important;
 }
 
-@include selector(dd) {
+@include mixins.selector(dd) {
   padding-left: 2rem !important;
 }
 
-@include selector(
+@include mixins.selector(
   img,
   svg
 ) {
   align-self: flex-start !important;
-  border: 1px solid $grey-light !important;
+  border: 1px solid variables.$grey-light !important;
 }
 
-@include selector(p) {
+@include mixins.selector(p) {
   margin-bottom: 1rem !important;
 }
 
-@include selector(hr) {
+@include mixins.selector(hr) {
   height: 2px !important;
   margin-bottom: 1rem !important;
-  background: $grey-light !important;
+  background: variables.$grey-light !important;
 }

@@ -1,6 +1,8 @@
+@use "mixins";
+
 /* stylelint-disable plugin/declaration-block-no-ignored-properties */
 
-@include selector("*") {
+@include mixins.selector("*") {
   &,
   &::before,
   &::after {
