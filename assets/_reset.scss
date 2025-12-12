@@ -1,60 +1,61 @@
-@include selector('*') {
+/* stylelint-disable plugin/declaration-block-no-ignored-properties */
 
-  &, &:before, &:after {
+@include selector("*") {
+  &,
+  &::before,
+  &::after {
     position: static !important;
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    color: inherit !important;
-    text-decoration: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    transform: none !important;
-    transition: none !important;
-    pointer-events: auto !important;
-    left: auto !important;
-    top: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    font-family: sans-serif !important;
-    font-size: inherit !important;
-    line-height: inherit !important;
-    text-align: left !important;
-    overflow: visible !important;
-    font-weight: inherit !important;
-    font-style: normal !important;
-    list-style: none !important;
-    border-radius: 0 !important;
-    clip: auto !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    align-items: stretch !important;
-    align-self: auto !important;
+    inset: auto !important;
+    vertical-align: baseline !important;
     flex-basis: auto !important;
-    text-transform: none !important;
-    text-shadow: none !important;
-    float: none !important;
-    opacity: 1 !important;
-    text-indent: 0 !important;
-    box-sizing: border-box !important;
-    white-space: normal !important;
-    width: auto !important;
-    height: auto !important;
-    visibility: visible !important;
-    gap: 0 !important;
+    flex-direction: column !important;
     grid-template-rows: none !important;
     grid-template-columns: none !important;
     grid-row: auto / auto;
     grid-column: auto / auto !important;
-    vertical-align: baseline !important;
+    gap: 0 !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    align-self: auto !important;
+    float: none !important;
+    overflow: visible !important;
+    clip: auto !important;
+    box-sizing: border-box !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: none !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    list-style: none !important;
+    font-weight: inherit !important;
+    font-style: normal !important;
+    font-size: inherit !important;
+    font-family: sans-serif !important;
+    line-height: inherit !important;
     letter-spacing: normal !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    text-shadow: none !important;
+    white-space: normal !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: none !important;
+    transform: none !important;
   }
 
-  &:before, &:after {
+  &::before,
+  &::after {
     display: none !important;
   }
 

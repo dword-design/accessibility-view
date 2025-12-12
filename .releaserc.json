@@ -9,27 +9,11 @@
         "npmPublish": false
       }
     ],
-    [
-      "@semantic-release/github",
-      {
-        "assets": [
-          {
-            "label": "Extension",
-            "path": "extension.zip"
-          }
-        ]
-      }
-    ],
+    "@semantic-release/github",
     [
       "@semantic-release/git",
       {
         "message": "chore: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }
-    ],
-    [
-      "@semantic-release/exec",
-      {
-        "publishCmd": "yarn publish-extension --chrome-zip=dist/chrome.zip --firefox-zip=dist/firefox.zip --firefox-sources-zip=dist/firefox-sources.zip"
       }
     ]
   ]

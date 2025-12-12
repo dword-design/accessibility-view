@@ -1,5 +1,8 @@
 {
   "name": "@dword-design/web-extension",
   "startUrl": "https://de.wikipedia.org",
-  "testInContainer": true
+  "testInContainer": true,
+  "depcheckConfig": {
+    "ignoreMatches": ["@playwright/browser-chromium", "sass"]
+  }
 }

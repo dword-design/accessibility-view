@@ -1,7 +1,7 @@
 @mixin selector($selectors...) {
-
   @each $selector in $selectors {
-    html #{$selector}:not(##{$unique-id}), #{$selector}:not(##{$unique-id}) {
+    html #{$selector}:not(##{$unique-id}),
+    #{$selector}:not(##{$unique-id}) {
       @content;
     }
   }
