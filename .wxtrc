@@ -1,0 +1,3 @@
+modules[]=@wxt-dev/module-vue
+outDir=dist
+outDirTemplate={{browser}}

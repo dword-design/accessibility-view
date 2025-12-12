@@ -1,0 +1,7 @@
+ignoredBuiltDependencies:
+  - esbuild
+  - spawn-sync
+  - unrs-resolver
+
+onlyBuiltDependencies:
+  - '@playwright/browser-chromium'

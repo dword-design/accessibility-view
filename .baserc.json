@@ -1,4 +1,7 @@
 {
+  "depcheckConfig": {
+    "ignoreMatches": ["@playwright/browser-chromium", "sass"]
+  },
   "name": "@dword-design/web-extension",
   "startUrl": "https://de.wikipedia.org",
   "testInContainer": true

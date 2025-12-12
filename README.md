@@ -3,44 +3,44 @@
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
-  <p>
-    <img src="https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue" alt="Linux macOS Windows compatible"><a href="https://github.com/dword-design/accessibility-view/actions">
-      <img
-        src="https://github.com/dword-design/accessibility-view/workflows/build/badge.svg"
-        alt="Build status"
-      >
-    </a><a href="https://codecov.io/gh/dword-design/accessibility-view">
-      <img
-        src="https://codecov.io/gh/dword-design/accessibility-view/branch/master/graph/badge.svg"
-        alt="Coverage status"
-      >
-    </a><a href="https://david-dm.org/dword-design/accessibility-view">
-      <img src="https://img.shields.io/david/dword-design/accessibility-view" alt="Dependency status">
-    </a><img src="https://img.shields.io/badge/renovate-enabled-brightgreen" alt="Renovate enabled"><br/><a href="https://gitpod.io/#https://github.com/dword-design/accessibility-view">
-      <img
-        src="https://gitpod.io/button/open-in-gitpod.svg"
-        alt="Open in Gitpod"
-        width="114"
-      >
-    </a><a href="https://www.buymeacoffee.com/dword">
-      <img
-        src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg"
-        alt="Buy Me a Coffee"
-        width="114"
-      >
-    </a><a href="https://paypal.me/SebastianLandwehr">
-      <img
-        src="https://sebastianlandwehr.com/images/paypal.svg"
-        alt="PayPal"
-        width="163"
-      >
-    </a><a href="https://www.patreon.com/dworddesign">
-      <img
-        src="https://sebastianlandwehr.com/images/patreon.svg"
-        alt="Patreon"
-        width="163"
-      >
-    </a>
+<p>
+  <img src="https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue" alt="Linux macOS Windows compatible"><a href="https://github.com/dword-design/accessibility-view/actions">
+    <img
+      src="https://github.com/dword-design/accessibility-view/workflows/build/badge.svg"
+      alt="Build status"
+    >
+  </a><a href="https://codecov.io/gh/dword-design/accessibility-view">
+    <img
+      src="https://codecov.io/gh/dword-design/accessibility-view/branch/master/graph/badge.svg"
+      alt="Coverage status"
+    >
+  </a><a href="https://david-dm.org/dword-design/accessibility-view">
+    <img src="https://img.shields.io/david/dword-design/accessibility-view" alt="Dependency status">
+  </a><img src="https://img.shields.io/badge/renovate-enabled-brightgreen" alt="Renovate enabled"><br/><a href="https://gitpod.io/#https://github.com/dword-design/accessibility-view">
+    <img
+      src="https://gitpod.io/button/open-in-gitpod.svg"
+      alt="Open in Gitpod"
+      width="114"
+    >
+  </a><a href="https://www.buymeacoffee.com/dword">
+    <img
+      src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg"
+      alt="Buy Me a Coffee"
+      width="114"
+    >
+  </a><a href="https://paypal.me/SebastianLandwehr">
+    <img
+      src="https://sebastianlandwehr.com/images/paypal.svg"
+      alt="PayPal"
+      width="163"
+    >
+  </a><a href="https://www.patreon.com/dworddesign">
+    <img
+      src="https://sebastianlandwehr.com/images/patreon.svg"
+      alt="Patreon"
+      width="163"
+    >
+  </a>
 </p>
 <!-- /BADGES -->
 
@@ -51,22 +51,22 @@ Accessibility View converts an arbitrary website into its accessibility relevant
 <!-- INSTALL/ -->
 ## Recommended setup
 * Node.js 20.11.1
-* Yarn 1.22.19
+* pnpm 9.15.3
 
 ## Install
 ```bash
-$ yarn --frozen-lockfile
+$ pnpm install --frozen-lockfile
 ```
 
 ## Running a development server
 ```bash
-$ yarn dev [browser]
+$ pnpm dev -b <browser>
 ```
 Available browsers are `firefox` and `chrome`. Default is `firefox`.
 
 ## Building the extension for upload
 ```bash
-$ yarn prepublishOnly [browser]
+$ pnpm prepublishOnly -b <browser>
 ```
 <!-- /INSTALL -->
 
